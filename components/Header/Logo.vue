@@ -20,32 +20,13 @@
 </template>
 
 <style lang="scss" scoped>
-$c-hover: scale-color($c-red, $lightness: -15%);
-$transition: all ease-in 0.3s;
-
 .logo {
   display: flex;
   align-items: center;
   width: max-content;
 
-  &:hover {
-    cursor: pointer;
-
-    .logo__icon path {
-      fill: $c-hover;
-    }
-
-    .logo__text {
-      color: $c-hover;
-    }
-  }
-
   &__icon {
     margin-right: 10px;
-
-    path {
-      transition: $transition;
-    }
   }
 
   &__text {
@@ -53,7 +34,6 @@ $transition: all ease-in 0.3s;
     font-size: $large-fs;
     font-weight: $fw-semibold;
     color: $c-red;
-    transition: $transition;
   }
 }
 </style>
