@@ -24,3 +24,10 @@ $c-red: #d02a27;
 $c-black: #1a1717;
 $c-white: #fbfbfb;
 $c-grey: #b2b2b2;
+
+$c-button-bg: $c-red;
+$c-button-hover-bg: scale-color($c-button-bg, $lightness: -20%);
+$c-button-text: $c-white;
+
+$c-icon-bg: $c-grey;
+$c-icon-hover-bg: $c-red;
