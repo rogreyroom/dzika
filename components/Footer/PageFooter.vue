@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <section class="footer">
     <p class="footer__text">
       <a
         href="mailto:www@dzikaroza.com.pl"
@@ -14,7 +14,7 @@
         class="footer__link"
       >Robert Adamczewski</a>
     </p>
-  </footer>
+  </section>
 </template>
 
 <script>
@@ -36,6 +36,7 @@ export default {
     font-family: $body-font;
     font-size: $small-fs;
     color: $c-grey;
+    margin: 0;
   }
 
   &__link {
