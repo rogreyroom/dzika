@@ -34,11 +34,11 @@ export default {
     },
     prepend: {
       type: String,
-      default: '🚀'
+      default: ''
     },
     append: {
       type: String,
-      default: '🤯'
+      default: ''
     }
   }
 }
@@ -48,16 +48,16 @@ export default {
 .button {
   // reset
   text-decoration: none;
-  border: none;
-  background-color: transparent;
-  font-family: inherit;
+  // border: none;
+  // background-color: transparent;
+  // font-family: inherit;
   padding: 0;
   cursor: pointer;
 
   // display
   display: inline-flex;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
 
   // visual
   background-color: $c-button-bg;
@@ -65,12 +65,14 @@ export default {
   border: 1px solid $c-button-bg;
 
   // size
-  padding: 0.25em 0.75em;
-  min-width: 10ch;
-  min-height: 44px;
+  padding: 0.25em var(--spacing);
+  width: 100%;
+  min-height: 100%;
+  // min-width: 10ch;
+  // min-height: 44px;
 
   // text
-  text-align: center;
+  text-align: left;
   line-height: 1.1;
 
   // effects
