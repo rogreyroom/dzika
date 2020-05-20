@@ -7,55 +7,72 @@ public_folder: /img
 
 collections:
   - name: 'ui'
-    label: 'Elementy stałe'
-    format: 'json'
-    file: 'assets/content/ui/ui.json'
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Stopka firma nazwa', name: 'company_name', widget: 'string' }
-      - { label: 'Stopka firma email', name: 'company_url', widget: 'string' }
-      - { label: 'Stopka deweloper nazwa', name: 'developer', widget: 'string' }
-      - { label: 'Stopka deweloper email', name: 'developer_url', widget: 'string' }
-      - { label: 'Facebook', name: 'facebook', widget: 'string' }
-      - { label: 'Instagram', name: 'instagram', widget: 'string' }
+    label: 'Stopka i social media'
+    files:
 
-  - name: 'home'
-    label: 'Strona domowa'
-    format: 'json'
-    file: 'assets/content/pages/home.json'
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Slogan', name: 'slogan', widget: 'string' }
-      - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
-      - { label: 'Otwarcie nagłówek', name: 'open_header', widget: 'string' }
-      - { label: 'Godziny otwarcia', name: 'open_time', widget: 'markdown' }
-      - { label: 'Adres restauracji', name: 'address', widget: 'markdown' }
+    - name: 'footer'
+      label: 'Stopka strony'
+      format: 'json'
+      file: 'assets/content/ui/footer.json'
+      slug: '{{slug}}'
+      editor:
+        preview: true
+      fields:
+        - { label: 'Stopka firma nazwa', name: 'company_name', widget: 'string' }
+        - { label: 'Stopka firma email', name: 'company_url', widget: 'string' }
+        - { label: 'Stopka deweloper nazwa', name: 'developer', widget: 'string' }
+        - { label: 'Stopka deweloper email', name: 'developer_url', widget: 'string' }
 
-  - name: 'events'
-    label: 'Imprezy okolicznościowe'
-    format: 'json'
-    file: 'assets/content/pages/events.json'
-    slug: '{{slug}}'
-    editor:
-      preview: false
-    fields:
-      - { label: 'Nagłówek', name: 'title', widget: 'string' }
-      - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
-      - { label: 'Oferta imprez okolicznościowych', name: 'events_text', widget: 'markdown' }
+    - name: 'social_media'
+      label: 'Social media'
+      format: 'json'
+      file: 'assets/content/ui/social.json'
+      slug: '{{slug}}'
+      editor:
+        preview: false
+      fields:
+        - { label: 'Facebook link', name: 'facebook', widget: 'string' }
+        - { label: 'Instagram link', name: 'instagram', widget: 'string' }
 
-      - name: 'event_menu'
-        label: 'Przykładowe menu'
-        format: 'json'
-        widget: 'list'
-        fields:
-          - { label: 'Nazwa zestawu', name: 'event_menu_name', widget: 'string' }
-          - { label: 'Zestaw opis', name: 'event_menu_description', widget: 'markdown' }
-          - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number' }
-          - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
+  - name: 'pages'
+    label: 'Podstrony'
+    files:
+
+    - name: 'home'
+      label: 'Strona domowa'
+      format: 'json'
+      file: 'assets/content/pages/home.json'
+      slug: '{{slug}}'
+      editor:
+        preview: false
+      fields:
+        - { label: 'Slogan', name: 'slogan', widget: 'string' }
+        - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
+        - { label: 'Otwarcie nagłówek', name: 'open_header', widget: 'string' }
+        - { label: 'Godziny otwarcia', name: 'open_time', widget: 'markdown' }
+        - { label: 'Adres restauracji', name: 'address', widget: 'markdown' }
+
+    - name: 'events'
+      label: 'Imprezy okolicznościowe'
+      format: 'json'
+      file: 'assets/content/pages/events.json'
+      slug: '{{slug}}'
+      editor:
+        preview: false
+      fields:
+        - { label: 'Nagłówek', name: 'title', widget: 'string' }
+        - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
+        - { label: 'Oferta imprez okolicznościowych', name: 'events_text', widget: 'markdown' }
+
+        - name: 'event_menu'
+          label: 'Przykładowe menu'
+          format: 'json'
+          widget: 'list'
+          fields:
+            - { label: 'Nazwa zestawu', name: 'event_menu_name', widget: 'string' }
+            - { label: 'Zestaw opis', name: 'event_menu_description', widget: 'markdown' }
+            - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number', valueType: 'float' }
+            - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
 
   - name: 'menu'
     label: 'Menu restauracji'
@@ -68,7 +85,7 @@ collections:
       - { label: 'Podtytuł', name: 'sub-title', widget: 'string' }
 
       - name: 'category'
-        label: 'Kategoria menu'
+        label: 'Potrawa'
         format: 'json'
         widget: 'list'
         fields:
