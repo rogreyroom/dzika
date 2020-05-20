@@ -16,6 +16,9 @@ export default {
 				rel: 'stylesheet',
 				href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Sedgwick+Ave&display=swap'
 			}
+		],
+		script: [
+			{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
 		]
 	},
 	/*
@@ -54,13 +57,20 @@ export default {
   */
 	modules: [
 		// Doc: https://axios.nuxtjs.org/usage
-		'@nuxtjs/axios'
+		'@nuxtjs/axios',
+		'@nuxtjs/markdownit'
 	],
 	/*
   ** Axios module configuration
   ** See https://axios.nuxtjs.org/options
   */
 	axios: {},
+	/*
+  ** Markdownit configuration
+  */
+	markdownit: {
+		injected: true
+	},
 	/*
   ** Build configuration
   */
@@ -69,5 +79,20 @@ export default {
     ** You can extend webpack config here
     */
 		extend(config, ctx) {}
+	},
+	/*
+  ** CMS router
+  */
+	generate: {
+		routes() {
+			const fs = require('fs');
+			const path = require('path');
+			return fs.readdirSync('./assets/content/pages').map(file => {
+				return {
+					route: `/pages/${path.parse(file).name}`, // Return the slug
+					payload: require(`./assets/content/pages/${file}`)
+				};
+			});
+		}
 	}
 };
