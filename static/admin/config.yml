@@ -6,7 +6,7 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'ui',
+  - name: 'ui'
     label: 'Elementy stałe'
     format: 'json'
     file: 'assets/content/ui/ui.json'
@@ -20,7 +20,8 @@ collections:
       - { label: 'Stopka deweloper email', name: 'developer_url', widget: 'string' }
       - { label: 'Facebook', name: 'facebook', widget: 'string' }
       - { label: 'Instagram', name: 'instagram', widget: 'string' }
-  - name: 'home',
+
+  - name: 'home'
     label: 'Strona domowa'
     format: 'json'
     file: 'assets/content/pages/home.json'
@@ -33,7 +34,8 @@ collections:
       - { label: 'Otwarcie nagłówek', name: 'open_header', widget: 'string' }
       - { label: 'Godziny otwarcia', name: 'open_time', widget: 'markdown' }
       - { label: 'Adres restauracji', name: 'address', widget: 'markdown' }
-  - name: 'events',
+
+  - name: 'events'
     label: 'Imprezy okolicznościowe'
     format: 'json'
     file: 'assets/content/pages/events.json'
@@ -44,7 +46,7 @@ collections:
       - { label: 'Nagłówek', name: 'title', widget: 'string' }
       - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
       - { label: 'Oferta imprez okolicznościowych', name: 'events_text', widget: 'markdown' }
-    widget: 'object'
+
       - name: 'event_menu'
         label: 'Przykładowe menu'
         format: 'json'
@@ -54,22 +56,23 @@ collections:
           - { label: 'Zestaw opis', name: 'event_menu_description', widget: 'markdown' }
           - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number' }
           - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
+
   - name: 'menu'
-        label: 'Menu'
+    label: 'Menu restauracji'
+    format: 'json'
+    folder: 'assets/content/menu'
+    create: true
+    slug: '{{year}}-{{month}}-{{day}}{{slug}}'
+    fields:
+      - { label: 'Tytuł', name: 'title', widget: 'string' }
+      - { label: 'Podtytuł', name: 'sub-title', widget: 'string' }
+
+      - name: 'category'
+        label: 'Kategoria menu'
         format: 'json'
-        folder: 'assets/content/menu'
-        create: true
-        slug: '{{year}}-{{month}}-{{day}}{{slug}}'
+        widget: 'list'
         fields:
-          - { label: 'Tytuł', name: 'title', widget: 'string' }
-          - { label: 'Podtytuł', name: 'sub-title', widget: 'string' }
-        widget: 'object'
-          - name: 'category'
-            label: 'Kategoria menu'
-            format: 'json'
-            widget: 'list'
-            fields:
-              - { label: 'Nazwa potrawy', name: 'name', widget: 'string' }
-              - { label: 'Opis potrawy', name: 'description', widget: 'string' }
-              - { label: 'Ilość/wielkość potrawy', name: 'size', widget: 'string' }
-              - { label: 'Cena potrawy', name: 'price', widget: 'string' }
+          - { label: 'Nazwa potrawy', name: 'name', widget: 'string' }
+          - { label: 'Opis potrawy', name: 'description', widget: 'string' }
+          - { label: 'Ilość/wielkość potrawy', name: 'size', widget: 'string' }
+          - { label: 'Cena potrawy', name: 'price', widget: 'string' }
