@@ -38,6 +38,7 @@ export default {
   font-size: $normal-fs;
   font-weight: $fw-normal;
   margin: 0;
+  margin-bottom: 1.5rem;
 }
 
 .slogan__sub-title {
