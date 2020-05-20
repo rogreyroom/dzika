@@ -1,0 +1,18 @@
+{
+  "title": "Pizza",
+  "sub-title": "smaczna pizza na najlepszym cieście",
+  "category": [
+    {
+      "name": "Pizza Margherita",
+      "description": "Sos pomidorowy, ser mozzarella ",
+      "size": "średnia / duża",
+      "price": "16,99pln / 21,99pln"
+    },
+    {
+      "name": "Pizza Salami",
+      "description": "salami",
+      "size": "średnia / duża",
+      "price": "27,99pln / 20,99pln"
+    }
+  ]
+}
