@@ -7,21 +7,8 @@ public_folder: /img
 
 collections:
   - name: 'ui'
-    label: 'Stopka i social media'
+    label: 'Social media'
     files:
-
-    - name: 'footer'
-      label: 'Stopka strony'
-      format: 'json'
-      file: 'assets/content/ui/footer.json'
-      slug: '{{slug}}'
-      editor:
-        preview: true
-      fields:
-        - { label: 'Stopka firma nazwa', name: 'company_name', widget: 'string' }
-        - { label: 'Stopka firma email', name: 'company_url', widget: 'string' }
-        - { label: 'Stopka deweloper nazwa', name: 'developer', widget: 'string' }
-        - { label: 'Stopka deweloper email', name: 'developer_url', widget: 'string' }
 
     - name: 'social_media'
       label: 'Social media'
@@ -79,7 +66,7 @@ collections:
     format: 'json'
     folder: 'assets/content/menu'
     create: true
-    slug: '{{year}}-{{month}}-{{day}}{{slug}}'
+    slug: '{{slug}}'
     fields:
       - { label: 'Tytuł', name: 'title', widget: 'string' }
       - { label: 'Podtytuł', name: 'sub-title', widget: 'string' }
