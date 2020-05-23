@@ -57,7 +57,7 @@ export default {
   // display
   display: inline-flex;
   align-items: center;
-  justify-content: start;
+  justify-content: flex-start;
 
   // visual
   background-color: $c-button-bg;
