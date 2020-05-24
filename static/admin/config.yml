@@ -18,8 +18,13 @@ collections:
         preview: false
       widget: 'object'
       fields:
-        - { label: 'Social media - nazwa', name: 'social_media_name', widget: 'string' }
-        - { label: 'Social media - link', name: 'social_media_url', widget: 'string' }
+        - name: 'social_media_links'
+          label: 'Linki'
+          format: 'json'
+          widget: 'list'
+          fields:
+            - { label: 'Social media - nazwa', name: 'social_media_name', widget: 'string' }
+            - { label: 'Social media - link', name: 'social_media_url', widget: 'string' }
 
   - name: 'pages'
     label: 'Podstrony'

@@ -53,6 +53,6 @@ export const actions = {
     await dispatch('FETCH_SOCIAL')
     await dispatch('FETCH_HOME')
     await dispatch('FETCH_EVENTS')
-    await dispatch('FETCH_FOOD_MENU')
+    // await dispatch('FETCH_FOOD_MENU')
   }
 }
