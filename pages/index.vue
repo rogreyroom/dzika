@@ -1,10 +1,10 @@
+/* eslint-disable vue/no-v-html */
 <template>
   <div class="container">
     <header class="header">
       <logo class="header__logo" />
       <img
-        srcset="/img/pizza-small.png 250h,
-                /img/pizza.png 350h"
+        srcset="/img/pizza-small.png 250h, /img/pizza.png 350h"
         sizes="(max-width: 600px) 480px,
               800px"
         src="/img/pizza-small.png"
@@ -12,38 +12,38 @@
         class="header__image"
       >
       <slogan
-        :title="1"
-        :phone="1"
+        :slogan="homePage.home_page_title"
+        :phone="homePage.phone"
         class="header__slogan"
       />
     </header>
 
     <nav class="navigation">
-      <page-menu :navigation-arr="1" />
+      <page-menu :navigation-arr="{}" />
     </nav>
 
     <main class="main">
       <section class="home">
         <h4 class="home__text">
-          Jesteśmy otwarci dla was:
+          {{ homePage.open_header }}
         </h4>
         <section class="home__section">
-          <p class="home__text">Pn-Wt - Zamknięte
-            Sr-Pt - 12:00 - 22:00
-            So-Ni - 10:00 - 22:00
-          </p>
+          <div
+            class="home__text"
+            v-html="$md.render(homePage.open_time)"
+          />
         </section>
         <section class="home__section">
-          <p class="home__text">Restauracja Dzika Róża
-            47-400 Racibórz
-            ul. Jana Pawła 2
-          </p>
+          <div
+            class="home__text"
+            v-html="$md.render(homePage.address)"
+          />
         </section>
       </section>
     </main>
 
     <aside class="aside">
-      <social :social="1" />
+      <social :social="{}" />
     </aside>
 
     <footer class="footer">
@@ -53,7 +53,7 @@
 </template>
 
 <script>
-
+import { mapState } from 'vuex'
 import Logo from '~/components/Header/Logo.vue'
 import Slogan from '~/components/Header/Slogan.vue'
 import Social from '~/components/Aside/Social.vue'
@@ -70,9 +70,15 @@ export default {
   },
   data () {
     return {
-
     }
+  },
+  computed: {
+
+    ...mapState('homePage', ['home_page_title', 'cta_phone_text', 'cta_phone_number', 'company_opening_hours_header', 'company_opening_hours', 'company_address'])
+  },
+  mounted () {
   }
+
 }
 </script>
 
