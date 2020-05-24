@@ -12,8 +12,9 @@
         class="header__image"
       >
       <slogan
-        :slogan="homePage.home_page_title"
-        :phone="homePage.phone"
+        :home-title="home_page_title"
+        :cta-title="cta_phone_text"
+        :cta-phone="cta_phone_number"
         class="header__slogan"
       />
     </header>
@@ -25,18 +26,18 @@
     <main class="main">
       <section class="home">
         <h4 class="home__text">
-          {{ homePage.open_header }}
+          {{ company_opening_hours_header }}
         </h4>
         <section class="home__section">
           <div
             class="home__text"
-            v-html="$md.render(homePage.open_time)"
+            v-html="$md.render(company_opening_hours)"
           />
         </section>
         <section class="home__section">
           <div
             class="home__text"
-            v-html="$md.render(homePage.address)"
+            v-html="$md.render(company_address)"
           />
         </section>
       </section>
@@ -73,12 +74,13 @@ export default {
     }
   },
   computed: {
-
-    ...mapState('homePage', ['home_page_title', 'cta_phone_text', 'cta_phone_number', 'company_opening_hours_header', 'company_opening_hours', 'company_address'])
-  },
-  mounted () {
+    ...mapState(['home_page_title', 'cta_phone_text', 'cta_phone_number']),
+    ...mapState({
+      company_opening_hours_header: state => state.homePage.company_opening_hours_header,
+      company_opening_hours: state => state.homePage.company_opening_hours,
+      company_address: state => state.homePage.company_address
+    })
   }
-
 }
 </script>
 
@@ -143,7 +145,6 @@ $image-size: 80px;
   &__text {
     font-size: $normal-fs;
     margin: 0;
-    white-space: pre-line;
   }
 }
 

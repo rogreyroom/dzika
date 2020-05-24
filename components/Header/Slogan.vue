@@ -1,13 +1,15 @@
 <template>
   <section class="slogan">
     <h1 class="slogan__title">
-      {{ title }}
+      {{ homeTitle }}
     </h1>
     <h3 class="slogan__sub-title">
-      <span>
+      {{ ctaTitle }}
+      <span>{{ ctaPhone }}</span>
+      <!-- <span>
         Głodny? Zadzwoń:
-        <span>{{ phone }}</span>
-      </span>
+        <span>{{ cta-phone }}</span>
+      </span> -->
     </h3>
   </section>
 </template>
@@ -15,11 +17,15 @@
 <script>
 export default {
   props: {
-    title: {
+    homeTitle: {
       type: String,
       default: 'Smaczne miejsce dla rodzin!'
     },
-    phone: {
+    ctaTitle: {
+      type: String,
+      default: 'Głodny? Zadzwoń:'
+    },
+    ctaPhone: {
       type: [String, Number],
       default: '32 415 77 19'
     }
@@ -46,6 +52,11 @@ export default {
   font-size: $h3-fs;
   font-weight: $fw-normal;
   margin: 0;
-  white-space: pre-line;
+  width: min-content;
+
+  span {
+    display: inline-block;
+    width: max-content;
+  }
 }
 </style>
