@@ -40,7 +40,6 @@
 </template>
 
 <script>
-
 export default {
   props: {
     social: {
@@ -50,7 +49,6 @@ export default {
       }
     }
   }
-
 }
 </script>
 

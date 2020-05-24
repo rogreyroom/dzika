@@ -4,8 +4,8 @@
       {{ title }}
     </h1>
     <h3 class="slogan__sub-title">
-      <span>Głodny?
-        Zadzwoń:
+      <span>
+        Głodny? Zadzwoń:
         <span>{{ phone }}</span>
       </span>
     </h3>
