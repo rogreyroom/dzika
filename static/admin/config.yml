@@ -9,7 +9,6 @@ collections:
   - name: 'ui'
     label: 'Social media'
     files:
-
     - name: 'social_media'
       label: 'Social media'
       format: 'json'
@@ -17,9 +16,10 @@ collections:
       slug: '{{slug}}'
       editor:
         preview: false
+      widget: 'list'
       fields:
-        - { label: 'Facebook link', name: 'facebook', widget: 'string' }
-        - { label: 'Instagram link', name: 'instagram', widget: 'string' }
+        - { label: 'Social media - nazwa', name: 'social_media_name', widget: 'string' }
+        - { label: 'Social media - link', name: 'social_media_url', widget: 'string' }
 
   - name: 'pages'
     label: 'Podstrony'
@@ -33,11 +33,12 @@ collections:
       editor:
         preview: false
       fields:
-        - { label: 'Slogan', name: 'slogan', widget: 'string' }
-        - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
-        - { label: 'Otwarcie nagłówek', name: 'open_header', widget: 'string' }
-        - { label: 'Godziny otwarcia', name: 'open_time', widget: 'markdown' }
-        - { label: 'Adres restauracji', name: 'address', widget: 'markdown' }
+        - { label: 'Slogan/Hasło zachęcające', name: 'home_page_title', widget: 'string' }
+        - { label: 'Tekst zachęcający do zadzwonienia', name: 'cta_phone_text', widget: 'string' }
+        - { label: 'Numer telefonu', name: 'cta_phone_number', widget: 'string' }
+        - { label: 'Godziny otwarcia nagłówek', name: 'company_opening_hours_header', widget: 'string' }
+        - { label: 'Godziny otwarcia', name: 'company_opening_hours', widget: 'markdown' }
+        - { label: 'Adres restauracji', name: 'company_address', widget: 'markdown' }
 
     - name: 'events'
       label: 'Imprezy okolicznościowe'
@@ -47,8 +48,8 @@ collections:
       editor:
         preview: false
       fields:
-        - { label: 'Nagłówek', name: 'title', widget: 'string' }
-        - { label: 'Numer telefonu', name: 'phone', widget: 'string' }
+        - { label: 'Nagłówek strony', name: 'events_page_title', widget: 'string' }
+        - { label: 'Numer telefonu dla imprez okolicznościowych', name: 'events_phone_number', widget: 'string' }
         - { label: 'Oferta imprez okolicznościowych', name: 'events_text', widget: 'markdown' }
 
         - name: 'event_menu'
@@ -68,15 +69,14 @@ collections:
     create: true
     slug: '{{slug}}'
     fields:
-      - { label: 'Tytuł', name: 'title', widget: 'string' }
-      - { label: 'Podtytuł', name: 'sub-title', widget: 'string' }
-
+      - { label: 'Tytuł strony', name: 'menu_page_title', widget: 'string' }
+      - { label: 'Podtytuł strony', name: 'menu_page_subtitle', widget: 'string' }
       - name: 'category'
         label: 'Potrawa'
         format: 'json'
         widget: 'list'
         fields:
-          - { label: 'Nazwa potrawy', name: 'name', widget: 'string' }
-          - { label: 'Opis potrawy', name: 'description', widget: 'string' }
-          - { label: 'Ilość/wielkość potrawy', name: 'size', widget: 'string' }
-          - { label: 'Cena potrawy', name: 'price', widget: 'string' }
+          - { label: 'Nazwa potrawy', name: 'food_name', widget: 'string' }
+          - { label: 'Opis potrawy', name: 'food_description', widget: 'string' }
+          - { label: 'Ilość/wielkość potrawy', name: 'food_size', widget: 'string' }
+          - { label: 'Cena potrawy', name: 'food_price', widget: 'string' }
