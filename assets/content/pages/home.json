@@ -1,13 +1,8 @@
 {
-  "open_header": "Jesteśmy otwarci dla was:",
-  "open_time": "Pn-Wt - Zamknięte\n\nSr-Pt - 12:00 - 22:00\n\nSo-Ni - 10:00 - 22:00",
-  "company_opening_hours": "Pn-Wt - Zamknięte\\\nŚr - Pt - 12:00 - 22:00\\\nSo - Ni - 10:00 - 22:00",
-  "company_opening_hours_header": "Jesteśmy otwarci dla was:",
-  "home_page_title": "Smaczne miejsce dla rodzin!",
-  "cta_phone_number": "032 415 77 19",
-  "cta_phone_text": "Głodny? Zadzwoń:",
-  "phone": "32 415 77 19",
-  "company_address": "Restauracja Dzika Róża\\\n47-400 Racibórz,\\\nul. Jan Pawła 2",
-  "address": "Restauracja Dzika Róża\n\n47-400 Racibórz\n\nul. Jana Pawła 2",
-  "slogan": "Smaczne miejsce dla rodzin!"
+	"home_page_title": "Smaczne miejsce dla rodzin!",
+	"cta_phone_text": "Głodny? Zadzwoń:",
+	"cta_phone_number": "032 415 77 19",
+	"company_opening_hours_header": "Jesteśmy otwarci dla was:",
+	"company_opening_hours": "Pn-Wt - Zamknięte\\\nŚr - Pt - 12:00 - 22:00\\\nSo - Ni - 10:00 - 22:00",
+	"company_address": "Restauracja Dzika Róża\\\n47-400 Racibórz,\\\nul. Jan Pawła 2"
 }

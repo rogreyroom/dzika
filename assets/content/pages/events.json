@@ -1,15 +1,13 @@
 {
-  "title": "Imprezy okolicznościowe",
-  "phone": "32 415 77 19",
-  "events_text": "Oferujemy smaczne potrawy polskiej kuchni tradycyjnej i międzynarodowej, także z dostawą do domu. Zamówienia telefoniczne.",
-  "event_menu": [
-    {
-      "event_menu_name": "Obiad domowy",
-      "event_menu_description": "Pieczeń, czerwona kapusta i kluski.",
-      "event_menu_price": 45,
-      "event_menu_photo": "/img/pizza.png"
-    }
-  ],
-  "events_phone_number": "032 415 77 19",
-  "events_page_title": "Imprezy okolicznościowe"
+	"events_page_title": "Imprezy okolicznościowe",
+	"events_phone_number": "032 415 77 19",
+	"events_text": "Oferujemy smaczne potrawy polskiej kuchni tradycyjnej i międzynarodowej, także z dostawą do domu. Zamówienia telefoniczne.",
+	"event_menu": [
+		{
+			"event_menu_name": "Obiad domowy",
+			"event_menu_description": "Pieczeń, czerwona kapusta i kluski.",
+			"event_menu_price": 45,
+			"event_menu_photo": "/img/pizza.png"
+		}
+	]
 }
