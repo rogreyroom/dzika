@@ -53,43 +53,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.social {
-  // grid-area: social;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  min-height: 100%;
-  // padding-bottom: 20px;
+// .social {
+//   // grid-area: social;
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: flex-end;
+//   align-items: flex-end;
+//   min-height: 100%;
+//   // padding-bottom: 20px;
 
-  &__link {
-    // reset
-    text-decoration: none;
-    background-color: transparent;
-    font-family: inherit;
-    padding: 0;
-    cursor: pointer;
+//   &__link {
+//     // reset
+//     text-decoration: none;
+//     background-color: transparent;
+//     font-family: inherit;
+//     padding: 0;
+//     cursor: pointer;
 
-    display: block;
-    // width: 24px;
-    // height: 24px;
-    margin-bottom: 10px;
-    margin-right: 10px;
+//     display: block;
+//     // width: 24px;
+//     // height: 24px;
+//     margin-bottom: 10px;
+//     margin-right: 10px;
 
-    transition: 220ms all ease-in-out;
+//     transition: 220ms all ease-in-out;
 
-    &:hover > .social__icon path {
-      fill: $c-icon-hover-bg;
-    }
-  }
+//     &:hover > .social__icon path {
+//       fill: $c-icon-hover-bg;
+//     }
+//   }
 
-  &__icon {
-    width: 24px;
-    height: 24px;
+//   &__icon {
+//     width: 24px;
+//     height: 24px;
 
-    path {
-      fill: $c-grey;
-    }
-  }
-}
+//     path {
+//       fill: $c-grey;
+//     }
+//   }
+// }
 </style>

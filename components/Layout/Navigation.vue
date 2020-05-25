@@ -1,25 +1,26 @@
 <template>
   <ul class="menu">
+    SITE MENU!!!!!!!!!
     <li
       v-for="(item, index) in navigationArr"
       :key="index"
       class="menu__item"
     >
-      <nav-link
+      <!-- <nav-link
         :title="item.title"
         :link="item.link"
         class="menu__link"
-      />
+      /> -->
     </li>
   </ul>
 </template>
 
 <script>
-import NavLink from '~/components/Navigation/NavLink.vue'
+// import NavLink from '~/components/Navigation/NavLink.vue'
 
 export default {
   components: {
-    NavLink
+    // NavLink
   },
   props: {
     navigationArr: {
