@@ -41,25 +41,36 @@ import { mapState } from 'vuex'
 
 export default {
   computed: {
-    ...mapState(['events_page_title', 'events_phone_number', 'event_menu']),
     ...mapState({
-      events_text: state => state.eventsPage.events_text
+      events_page_title: state => state.eventsPage.events_page_title,
+      events_text: state => state.eventsPage.events_text,
+      events_phone_number: state => state.eventsPage.events_phone_number,
+      event_menu: state => state.eventsPage.event_menu
     })
   }
 
 }
 </script>
 
-<style lang="sass" scoped>
-.events
-&__title
-&__body
-&__phone
-
-.event
-&__set
-&__header
-&__body
-&__price
-&__image
+<style lang="scss" scoped>
+.events {
+  &__title {
+  }
+  &__body {
+  }
+  &__phone {
+  }
+}
+.event {
+  &__set {
+  }
+  &__header {
+  }
+  &__body {
+  }
+  &__price {
+  }
+  &__image {
+  }
+}
 </style>
