@@ -2,7 +2,8 @@ export const state = () => ({
   socialMedia: [],
   homePage: [],
   eventsPage: [],
-  menuPage: []
+  menuPage: [],
+  isHome: false
 })
 
 export const mutations = {
@@ -20,6 +21,10 @@ export const mutations = {
 
   SET_FOOD_MENU (state, payload) {
     state.menuPage = payload
+  },
+
+  SET_IS_HOME (state, payload) {
+    state.isHome = payload
   }
 }
 

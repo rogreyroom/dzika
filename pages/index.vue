@@ -1,8 +1,7 @@
 /* eslint-disable vue/no-v-html */
 <template>
-  <div class="container">
+  <section class="home">
     <header class="header">
-      <logo class="header__logo" />
       <img
         srcset="/img/pizza-small.png 250h, /img/pizza.png 350h"
         sizes="(max-width: 600px) 480px,
@@ -17,57 +16,37 @@
         :cta-phone="cta_phone_number"
         class="header__slogan"
       />
+      <navigation />
     </header>
-
-    <nav class="navigation">
-      <page-menu :navigation-arr="{}" />
-    </nav>
-
-    <main class="main">
-      <section class="home">
-        <h4 class="home__text">
-          {{ company_opening_hours_header }}
-        </h4>
-        <section class="home__section">
-          <div
-            class="home__text"
-            v-html="$md.render(company_opening_hours)"
-          />
-        </section>
-        <section class="home__section">
-          <div
-            class="home__text"
-            v-html="$md.render(company_address)"
-          />
-        </section>
+    <section>
+      <h4 class="home__text">
+        {{ company_opening_hours_header }}
+      </h4>
+      <section class="home__section">
+        <div
+          class="home__text"
+          v-html="$md.render(company_opening_hours)"
+        />
       </section>
-    </main>
-
-    <aside class="aside">
-      <social :social="{}" />
-    </aside>
-
-    <footer class="footer">
-      <page-footer />
-    </footer>
-  </div>
+      <section class="home__section">
+        <div
+          class="home__text"
+          v-html="$md.render(company_address)"
+        />
+      </section>
+    </section>
+  </section>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-import Logo from '~/components/Header/Logo.vue'
-import Slogan from '~/components/Header/Slogan.vue'
-import Social from '~/components/Aside/Social.vue'
-import PageFooter from '~/components/Footer/PageFooter.vue'
-import PageMenu from '~/components/Navigation/PageMenu.vue'
+import Slogan from '~/components/Home/Slogan.vue'
+import Navigation from '~/components/Home/Navigation/Navigation.vue'
 
 export default {
   components: {
-    Logo,
     Slogan,
-    Social,
-    PageFooter,
-    PageMenu
+    Navigation
   },
   data () {
     return {
@@ -85,75 +64,75 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$image-size: 80px;
+// $image-size: 80px;
 
-.container {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) $image-size;
-  grid-template-rows: auto auto minmax(min-content, 1fr) auto;
-  grid-template-areas:
-    'header header header'
-    'nav nav .'
-    'main main aside'
-    'footer footer footer';
-}
-.header {
-  grid-area: header;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr) $image-size;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    'logo logo image'
-    'slogan slogan image';
+// .container {
+//   min-height: 100vh;
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr) $image-size;
+//   grid-template-rows: auto auto minmax(min-content, 1fr) auto;
+//   grid-template-areas:
+//     'header header header'
+//     'nav nav .'
+//     'main main aside'
+//     'footer footer footer';
+// }
+// .header {
+//   grid-area: header;
+//   display: grid;
+//   grid-template-columns: repeat(2, 1fr) $image-size;
+//   grid-template-rows: auto 1fr;
+//   grid-template-areas:
+//     'logo logo image'
+//     'slogan slogan image';
 
-  &__logo {
-    grid-area: logo;
-    margin-top: var(--spacing);
-    margin-left: var(--spacing);
-  }
+//   &__logo {
+//     grid-area: logo;
+//     margin-top: var(--spacing);
+//     margin-left: var(--spacing);
+//   }
 
-  &__image {
-    grid-area: image;
-    height: 250px;
-    object-fit: none;
-    object-position: left center;
-  }
+//   &__image {
+//     grid-area: image;
+//     height: 250px;
+//     object-fit: none;
+//     object-position: left center;
+//   }
 
-  &__slogan {
-    grid-area: slogan;
-    margin-left: var(--spacing);
-  }
-}
+//   &__slogan {
+//     grid-area: slogan;
+//     margin-left: var(--spacing);
+//   }
+// }
 
-.navigation {
-  grid-area: nav;
-}
+// .navigation {
+//   grid-area: nav;
+// }
 
-.main {
-  grid-area: main;
-}
+// .main {
+//   grid-area: main;
+// }
 
-.home {
-  margin-left: var(--spacing);
-  margin-bottom: var(--spacing);
+// .home {
+//   margin-left: var(--spacing);
+//   margin-bottom: var(--spacing);
 
-  &__section {
-    margin-top: 1rem;
-  }
+//   &__section {
+//     margin-top: 1rem;
+//   }
 
-  &__text {
-    font-size: $normal-fs;
-    margin: 0;
-  }
-}
+//   &__text {
+//     font-size: $normal-fs;
+//     margin: 0;
+//   }
+// }
 
-.aside {
-  grid-area: aside;
-}
+// .aside {
+//   grid-area: aside;
+// }
 
-.footer {
-  grid-area: footer;
-  bottom: 0;
-}
+// .footer {
+//   grid-area: footer;
+//   bottom: 0;
+// }
 </style>
