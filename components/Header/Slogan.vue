@@ -6,10 +6,6 @@
     <h3 class="slogan__sub-title">
       {{ ctaTitle }}
       <span>{{ ctaPhone }}</span>
-      <!-- <span>
-        Głodny? Zadzwoń:
-        <span>{{ cta-phone }}</span>
-      </span> -->
     </h3>
   </section>
 </template>
@@ -19,15 +15,15 @@ export default {
   props: {
     homeTitle: {
       type: String,
-      default: 'Smaczne miejsce dla rodzin!'
+      default: ''
     },
     ctaTitle: {
       type: String,
-      default: 'Głodny? Zadzwoń:'
+      default: ''
     },
     ctaPhone: {
       type: [String, Number],
-      default: '32 415 77 19'
+      default: ''
     }
   }
 }
