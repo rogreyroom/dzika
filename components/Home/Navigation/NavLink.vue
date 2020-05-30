@@ -1,6 +1,6 @@
 <template>
   <nuxt-link
-    to="link"
+    :to="url"
     class="button"
   >
     <span
@@ -24,13 +24,13 @@
 <script>
 export default {
   props: {
-    link: {
+    url: {
       type: String,
       default: '/'
     },
     title: {
       type: String,
-      default: 'Menu'
+      default: ''
     },
     prepend: {
       type: String,

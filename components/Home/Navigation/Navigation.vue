@@ -1,14 +1,13 @@
 <template>
   <ul class="menu">
-    HOME MENU!!!!!!!!!
     <li
-      v-for="(item, index) in navigationArr"
+      v-for="(item, index) in navigation"
       :key="index"
       class="menu__item"
     >
       <nav-link
         :title="item.title"
-        :link="item.link"
+        :url="item.url"
         class="menu__link"
       />
     </li>
@@ -22,12 +21,18 @@ export default {
   components: {
     NavLink
   },
-  props: {
-    navigationArr: {
-      type: Object,
-      default: () => {
-        return {}
-      }
+  data () {
+    return {
+      navigation: [
+        {
+          title: 'Menu restauracji',
+          url: '/menu'
+        },
+        {
+          title: 'Imprezy okolicznościowe',
+          url: '/events'
+        }
+      ]
     }
   }
 }
@@ -50,7 +55,7 @@ export default {
   margin-bottom: 16px;
   // border: 1px solid $c-red;
   // transition: 0.5s ease;
-  background: aqua;
+  // background: aqua;
 }
 
 // .menu__item:hover {
