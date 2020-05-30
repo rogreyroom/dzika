@@ -24,6 +24,8 @@
   display: flex;
   align-items: center;
   width: max-content;
+  margin-top: var(--spacing);
+  margin-left: var(--spacing);
 
   &__icon {
     margin-right: 10px;
