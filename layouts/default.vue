@@ -42,6 +42,8 @@ export default {
 <style lang="scss" scoped>
 .container {
   min-height: 100vh;
+  max-width: 1280px;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr var(--home-hero-image-size);
   grid-template-rows: max-content minmax(min-content, 1fr) auto auto;
@@ -49,6 +51,14 @@ export default {
     'header header'
     'main aside'
     'footer footer';
+
+  @media (min-width: 1024px) {
+    grid-template-areas:
+      'header heder'
+      'main main'
+      'aside aside'
+      'footer footer';
+  }
 }
 .header {
   grid-area: header;

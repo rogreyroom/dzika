@@ -61,6 +61,11 @@ export default {
   justify-self: end;
   align-self: end;
 
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-self: flex-start;
+  }
+
   &__link {
     // reset
     text-decoration: none;
@@ -79,6 +84,11 @@ export default {
 
     &:hover > .social__icon path {
       fill: $c-icon-hover-bg;
+    }
+
+    @media (min-width: 1024px) {
+      margin-right: 10px;
+      margin-left: 10px;
     }
   }
 

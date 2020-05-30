@@ -1,7 +1,21 @@
+:root {
+	@media (min-width: 768px) {
+		--spacing: 40px;
+	}
+
+	@media (min-width: 1024px) {
+		--spacing: 60px;
+	}
+}
+
 html {
 	font-size: $fs-base-small;
 	box-sizing: border-box;
 	height: 100%;
+
+	@media (min-width: 768px) {
+		font-size: $fs-base-normal;
+	}
 }
 body {
 	background: $c-white;
@@ -12,4 +26,8 @@ body {
 	width: 100%;
 	line-height: 1.5;
 	// overflow: hidden;
+}
+
+p {
+	// margin: 0;
 }
