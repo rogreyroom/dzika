@@ -4,9 +4,9 @@
       <site-logo />
       <site-navigation v-if="!isHome" />
     </header>
-    <main class="main">
-      <nuxt />
-    </main>
+
+    <nuxt />
+
     <site-aside class="aside" />
     <site-footer class="footer" />
   </div>
@@ -43,22 +43,19 @@ export default {
 .container {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto minmax(min-content, 1fr) auto auto;
+  grid-template-columns: 1fr var(--home-hero-image-size);
+  grid-template-rows: max-content minmax(min-content, 1fr) auto auto;
   grid-template-areas:
-    'header'
-    'main'
-    'aside'
-    'footer';
+    'header header'
+    'main aside'
+    'footer footer';
 }
 .header {
   grid-area: header;
 }
-.main {
-  grid-area: main;
-}
 .aside {
   grid-area: aside;
+  // grid-row: header-start;
 }
 .footer {
   grid-area: footer;
