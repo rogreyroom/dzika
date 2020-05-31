@@ -26,7 +26,7 @@ export default {
   props: {
     url: {
       type: String,
-      default: '/'
+      default: ''
     },
     title: {
       type: String,
@@ -81,7 +81,7 @@ export default {
 
   &:hover {
     // background-color: $c-button-hover-bg;
-    background: none;
+    background: $c-white;
     animation: pulse 1s;
     box-shadow: 0 0 0 1.5rem rgba(252, 255, 255, 0.1);
 
@@ -91,7 +91,7 @@ export default {
   }
 
   &:focus {
-    outline: none;
+    outline: $c-white;
     box-shadow: 0 0 0 4px $c-button-hover-bg;
   }
 
