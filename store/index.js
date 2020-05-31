@@ -3,7 +3,17 @@ export const state = () => ({
   homePage: [],
   eventsPage: [],
   menuPage: [],
-  isHome: false
+  isHome: false,
+  navigation: [
+    {
+      title: 'Menu restauracji',
+      url: '/menu'
+    },
+    {
+      title: 'Imprezy okolicznościowe',
+      url: '/events'
+    }
+  ]
 })
 
 export const mutations = {

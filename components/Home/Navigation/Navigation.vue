@@ -15,6 +15,7 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 import NavLink from '~/components/Home/Navigation/NavLink.vue'
 
 export default {
@@ -23,17 +24,10 @@ export default {
   },
   data () {
     return {
-      navigation: [
-        {
-          title: 'Menu restauracji',
-          url: '/menu'
-        },
-        {
-          title: 'Imprezy okolicznościowe',
-          url: '/events'
-        }
-      ]
     }
+  },
+  computed: {
+    ...mapState(['navigation'])
   }
 }
 </script>
@@ -56,6 +50,9 @@ export default {
   // border: 1px solid $c-red;
   // transition: 0.5s ease;
   // background: aqua;
+  &:last-child {
+    margin-bottom: 0;
+  }
 }
 
 // .menu__item:hover {
