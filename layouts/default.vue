@@ -15,7 +15,7 @@
 <script>
 import { mapState, mapMutations } from 'vuex'
 import SiteLogo from '~/components/Layout/Logo.vue'
-import SiteNavigation from '~/components/Layout/Navigation.vue'
+import SiteNavigation from '~/components/Home/Navigation/Navigation.vue'
 import SiteAside from '~/components/Layout/Aside.vue'
 import SiteFooter from '~/components/Layout/Footer.vue'
 export default {
@@ -62,6 +62,7 @@ export default {
 }
 .header {
   grid-area: header;
+  z-index: 10;
 }
 .aside {
   grid-area: aside;
