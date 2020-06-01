@@ -41,21 +41,41 @@
         </div>
       </section>
     </section>
+    <div class="nav-button">
+      <nav-button
+        :title="getNavigationTitle"
+        :url="url"
+        class="button--radius button--shadow"
+      />
+    </div>
   </main>
 </template>
 
 <script>
-import { mapState } from 'vuex'
+import { mapState, mapGetters } from 'vuex'
+import NavButton from '~/components/NavButton.vue'
 
 export default {
   layout: 'main',
+  components: {
+    NavButton
+  },
+  data () {
+    return {
+      url: '/menu'
+    }
+  },
   computed: {
     ...mapState({
       events_page_title: state => state.eventsPage.events_page_title,
       events_text: state => state.eventsPage.events_text,
       events_phone_number: state => state.eventsPage.events_phone_number,
       event_menu: state => state.eventsPage.event_menu
-    })
+    }),
+    ...mapGetters(['GET_NAVIGATION_BY_URL']),
+    getNavigationTitle () {
+      return this.GET_NAVIGATION_BY_URL(this.url)[0].title
+    }
   }
 
 }
@@ -64,6 +84,31 @@ export default {
 <style lang="scss" scoped>
 .main {
   grid-area: main;
+}
+
+.nav-button {
+  // background: aqua;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  // display: flex;
+  // height: 32px;
+  // width: 65%;
+  // position: fixed;
+  // bottom: calc(var(--spacing) * 2);
+  // z-index: 10;
+  // left: 50%;
+  // transform: translateX(-50%);
+  // text-align: center;
+  // border: 1px solid darkblue;
+  // border-radius: 16px;
+  // box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
+
+  // justify-content: center;
 }
 
 .events {
