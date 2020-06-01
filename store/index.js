@@ -38,6 +38,12 @@ export const mutations = {
   }
 }
 
+export const getters = {
+  GET_NAVIGATION_BY_URL: state => (getUrl) => {
+    return state.navigation.filter(({ url }) => url === getUrl)
+  }
+}
+
 export const actions = {
   async FETCH_SOCIAL ({ commit }) {
     const social = await require('~/assets/content/ui/social.json')
