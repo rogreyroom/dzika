@@ -3,11 +3,12 @@
     <!-- <div
       v-for="(item, index) in navigation"
       :key="index"
+
+      :class="checkRoute(item.url)"
     > -->
     <li
       v-for="(item, index) in navigation"
       :key="index"
-      :class="checkRoute(item.url)"
       class="menu__item"
     >
       <nav-link
@@ -64,9 +65,8 @@ export default {
   width: 100%;
   overflow: hidden;
   // padding: calc(var(--spacing) * 2) 0;
-  position: fixed;
-  bottom: calc(var(--spacing) * 2);
-  z-index: 10;
+
+  display: none;
 }
 
 .menu__item {
