@@ -20,12 +20,13 @@ $large-fs: 1.125rem;
 
 // COLORS
 
-$c-red: #d02a27;
+$c-red: hsl(1, 68%, 48%);
 $c-black: #1a1717;
-$c-white: #fbfbfb;
-$c-grey: #b2b2b2;
+$c-white: hsl(0, 0%, 98%);
+$c-grey: hsl(0, 0%, 70%);
 
 $c-button-bg: $c-red;
+$c-button-outline: $c-grey;
 $c-button-hover-bg: scale-color($c-button-bg, $lightness: -20%);
 $c-button-text: $c-white;
 
@@ -37,4 +38,9 @@ $c-icon-hover-bg: $c-red;
 :root {
 	--spacing: 20px;
 	--home-hero-image-size: 80px;
+
+	--c-button-bg: #{$c-button-bg};
+	--c-button-text: #{$c-button-text};
+	--c-button-border: #{$c-button-bg};
+	--c-button-outline: #{$c-button-outline};
 }
