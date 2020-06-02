@@ -56,7 +56,6 @@ import { mapState, mapGetters } from 'vuex'
 import NavButton from '~/components/NavButton.vue'
 
 export default {
-  layout: 'main',
   components: {
     NavButton
   },

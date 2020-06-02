@@ -64,6 +64,7 @@ import Slogan from '~/components/Home/Slogan.vue'
 import Navigation from '~/components/Home/Navigation/Navigation.vue'
 
 export default {
+  layout: 'main',
   components: {
     Slogan,
     Navigation
