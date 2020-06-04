@@ -33,27 +33,27 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-}
+// .menu {
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+// }
 
-.menu__item {
-  display: block;
-  height: 32px;
-  width: 100%;
-  // line-height: 32px;
-  // background: var(--c-red);
-  margin-bottom: 16px;
-  // border: 1px solid $c-red;
-  // transition: 0.5s ease;
-  // background: aqua;
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
+// .menu__item {
+//   display: block;
+//   height: 32px;
+//   width: 100%;
+//   // line-height: 32px;
+//   // background: var(--c-red);
+//   margin-bottom: 16px;
+//   // border: 1px solid $c-red;
+//   // transition: 0.5s ease;
+//   // background: aqua;
+//   &:last-child {
+//     margin-bottom: 0;
+//   }
+// }
 
 // .menu__item:hover {
 //   background: none;

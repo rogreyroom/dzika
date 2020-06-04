@@ -53,34 +53,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.menu {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  // background: aquamarine;
-  height: 70px;
-  width: 100%;
-  overflow: hidden;
-  // padding: calc(var(--spacing) * 2) 0;
+// .menu {
+//   margin: 0;
+//   padding: 0;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   justify-content: center;
+//   // background: aquamarine;
+//   height: 70px;
+//   width: 100%;
+//   overflow: hidden;
+//   // padding: calc(var(--spacing) * 2) 0;
 
-  display: none;
-}
+//   display: none;
+// }
 
-.menu__item {
-  display: block;
-  height: 32px;
-  width: 65%;
+// .menu__item {
+//   display: block;
+//   height: 32px;
+//   width: 65%;
 
-  // width: 100%;
-  // line-height: 32px;
-  // background: var(--c-red);
-  // margin-bottom: 4px;
-  // border: 1px solid $c-red;
-  // transition: 0.5s ease;
-}
+//   // width: 100%;
+//   // line-height: 32px;
+//   // background: var(--c-red);
+//   // margin-bottom: 4px;
+//   // border: 1px solid $c-red;
+//   // transition: 0.5s ease;
+// }
 
 // .menu__item:hover {
 //   background: none;
@@ -99,21 +99,21 @@ export default {
 //   }
 // }
 
-.hide-me {
-  display: none;
-  background: orchid;
-}
+// .hide-me {
+//   display: none;
+//   background: orchid;
+// }
 
-.menu__link {
-  justify-content: center;
-  border: 1px solid $c-red;
-  border-radius: 16px;
-  // height: 32px;
-  //   font-weight: $fw-normal;
-  //   line-height: 32px;
-  //   padding-left: 20px;
-  //   color: $c-white;
-  // box-shadow: 4px 4px 10px 1.5rem rgba(47, 31, 232, 0.9);
-  box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
-}
+// .menu__link {
+//   justify-content: center;
+//   border: 1px solid $c-red;
+//   border-radius: 16px;
+//   // height: 32px;
+//   //   font-weight: $fw-normal;
+//   //   line-height: 32px;
+//   //   padding-left: 20px;
+//   //   color: $c-white;
+//   // box-shadow: 4px 4px 10px 1.5rem rgba(47, 31, 232, 0.9);
+//   box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
+// }
 </style>

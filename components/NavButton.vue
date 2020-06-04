@@ -61,91 +61,91 @@ export default {
 
 // justify-content: center;
 
-.button {
-  // reset
-  text-decoration: none;
-  // border: none;
-  // background-color: transparent;
-  // font-family: inherit;
-  padding: 0;
-  cursor: pointer;
+// .button {
+//   // reset
+//   text-decoration: none;
+//   // border: none;
+//   // background-color: transparent;
+//   // font-family: inherit;
+//   padding: 0;
+//   cursor: pointer;
 
-  // display
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
+//   // display
+//   display: inline-flex;
+//   align-items: center;
+//   justify-content: center;
 
-  // visual
-  background-color: var(--c-button-bg);
-  color: var(--c-button-text);
-  border: 1px solid var(--c-button-border);
+//   // visual
+//   background-color: var(--c-button-bg);
+//   color: var(--c-button-text);
+//   border: 1px solid var(--c-button-border);
 
-  // size
-  padding: 0.088em 2.25em;
-  // width: 100%;
-  // min-height: 100%;
-  min-width: 10ch;
-  min-height: 44px;
+//   // size
+//   padding: 0.088em 2.25em;
+//   // width: 100%;
+//   // min-height: 100%;
+//   min-width: 10ch;
+//   min-height: 44px;
 
-  // text
-  text-align: center;
-  line-height: 1.1;
+//   // text
+//   text-align: center;
+//   line-height: 1.1;
 
-  // effects
-  // transition: 220ms all ease-in-out;
-  transition: 0.5s ease;
+//   // effects
+//   // transition: 220ms all ease-in-out;
+//   transition: 0.5s ease;
 
-  &:hover {
-    --c-button-text: #{$c-button-bg};
-    --c-button-bg: #{$c-button-text};
+//   &:hover {
+//     --c-button-text: #{$c-button-bg};
+//     --c-button-bg: #{$c-button-text};
 
-    // background-color: $c-button-hover-bg;
-    // background: $c-white;
-    animation: pulse 1s;
-    box-shadow: 0 0 0 1.5rem rgba(252, 255, 255, 0.1);
+//     // background-color: $c-button-hover-bg;
+//     // background: $c-white;
+//     animation: pulse 1s;
+//     box-shadow: 0 0 0 1.5rem rgba(252, 255, 255, 0.1);
 
-    // .button__body {
-    //   color: $c-button-bg;
-    // }
-  }
+//     // .button__body {
+//     //   color: $c-button-bg;
+//     // }
+//   }
 
-  &:focus {
-    outline: var(--c-button-bg);
-    box-shadow: 0 0 0 4px var(--c-button-outline);
-  }
+//   &:focus {
+//     outline: var(--c-button-bg);
+//     box-shadow: 0 0 0 4px var(--c-button-outline);
+//   }
 
-  &:active {
-    --c-button-text: #{$c-button-bg};
-    --c-button-bg: #{$c-button-text};
-  }
+//   &:active {
+//     --c-button-text: #{$c-button-bg};
+//     --c-button-bg: #{$c-button-text};
+//   }
 
-  &--radius {
-    border-radius: 22px;
-  }
+//   &--radius {
+//     border-radius: 22px;
+//   }
 
-  &--shadow {
-    box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
-  }
+//   &--shadow {
+//     box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
+//   }
 
-  &__body {
-    display: block;
-    font-family: $body-font;
-    font-size: $normal-fs;
-  }
+//   &__body {
+//     display: block;
+//     font-family: $body-font;
+//     font-size: $normal-fs;
+//   }
 
-  &__prepend {
-    display: block;
-    margin-right: 0.5em;
-  }
-  &__append {
-    display: block;
-    margin-left: 0.5em;
-  }
-}
+//   &__prepend {
+//     display: block;
+//     margin-right: 0.5em;
+//   }
+//   &__append {
+//     display: block;
+//     margin-left: 0.5em;
+//   }
+// }
 
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 $c-button-bg;
-  }
-}
+// @keyframes pulse {
+//   0% {
+//     box-shadow: 0 0 0 0 $c-button-bg;
+//   }
+// }
 </style>

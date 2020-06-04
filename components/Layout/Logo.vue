@@ -25,31 +25,31 @@
 </template>
 
 <style lang="scss" scoped>
-.logo {
-  width: max-content;
-  margin-top: var(--spacing);
-  margin-left: var(--spacing);
+// .logo {
+//   width: max-content;
+//   margin-top: var(--spacing);
+//   margin-left: var(--spacing);
 
-  &__link {
-    text-decoration: none;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
+//   &__link {
+//     text-decoration: none;
+//     margin: 0;
+//     display: flex;
+//     align-items: center;
+//     cursor: pointer;
+//   }
 
-  &__icon {
-    margin-right: 10px;
-    height: 32px;
-    width: 32px;
-  }
+//   &__icon {
+//     margin-right: 10px;
+//     height: 32px;
+//     width: 32px;
+//   }
 
-  &__text {
-    font-family: $body-font;
-    font-size: $large-fs;
-    font-weight: $fw-semibold;
-    letter-spacing: 0.05em;
-    color: $c-red;
-  }
-}
+//   &__text {
+//     font-family: $body-font;
+//     font-size: $large-fs;
+//     font-weight: $fw-semibold;
+//     letter-spacing: 0.05em;
+//     color: $c-red;
+//   }
+// }
 </style>

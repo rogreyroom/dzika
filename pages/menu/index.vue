@@ -33,7 +33,7 @@ export default {
 </script>
 
 <style>
-.main {
+/* .main {
   grid-area: main;
-}
+} */
 </style>

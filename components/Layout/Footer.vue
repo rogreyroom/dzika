@@ -22,36 +22,36 @@ export default {}
 </script>
 
 <style lang="scss" scoped>
-.footer {
-  // bottom: 0;
-  // grid-area: footer;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 0 10px 5px 10px;
+// .footer {
+//   // bottom: 0;
+//   // grid-area: footer;
+//   display: flex;
+//   flex-direction: row;
+//   justify-content: space-between;
+//   margin: 0 10px 5px 10px;
 
-  &__text {
-    font-family: $body-font;
-    font-size: $small-fs;
-    color: $c-grey;
-    margin: 0;
-  }
+//   &__text {
+//     font-family: $body-font;
+//     font-size: $small-fs;
+//     color: $c-grey;
+//     margin: 0;
+//   }
 
-  &__link {
-    text-decoration: none;
-    border: none;
-    background-color: transparent;
-    font-family: inherit;
-    padding: 0;
-    cursor: pointer;
+//   &__link {
+//     text-decoration: none;
+//     border: none;
+//     background-color: transparent;
+//     font-family: inherit;
+//     padding: 0;
+//     cursor: pointer;
 
-    color: $c-grey;
-    transition: 220ms all ease-in-out;
+//     color: $c-grey;
+//     transition: 220ms all ease-in-out;
 
-    &:hover,
-    &:focus {
-      color: $c-black;
-    }
-  }
-}
+//     &:hover,
+//     &:focus {
+//       color: $c-black;
+//     }
+//   }
+// }
 </style>

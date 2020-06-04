@@ -5,7 +5,7 @@
       <site-navigation v-if="!isHome" />
     </header>
 
-    <nuxt />
+    <nuxt class="main" />
 
     <site-aside class="aside" />
     <site-footer class="footer" />
@@ -63,6 +63,9 @@ export default {
 .header {
   grid-area: header;
   z-index: 10;
+}
+.main {
+  grid-area: main;
 }
 .aside {
   grid-area: aside;
