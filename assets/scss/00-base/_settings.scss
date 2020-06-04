@@ -1,0 +1,61 @@
+:root {
+	/* FONT */
+	--ff-primary: 'Sedgwick Ave', cursive;
+	--ff-secondary: 'Raleway', sans-serif;
+	--fs-base-small: 14px;
+	--fs-base-normal: 16px;
+	--fw-normal: 400;
+	--fw-semibold: 600;
+
+	/* Title */
+	--title-large: 2.5rem;
+	--title-normal: 2rem;
+	--title-small: 1.5rem;
+	--title-extra-small: 1.25rem;
+
+	/* Body */
+	--body-large: 1.25rem;
+	--body-normal: 1.125rem;
+	--body-small: 1rem;
+	--body-info: .875rem;
+
+	/* COLORS */
+	--primary-hue: 1;
+	--secondary-hue: 180;
+	--neutral-light-hue: 0;
+	--neutral-dark-hue: 240;
+
+	/* Accent */
+	--primary: hsl(var(--primary-hue), 68%, 48%);
+	--primary-light: hsl(var(--primary-hue), 75%, 60%);
+	--primary-dark: hsl(var(--primary-hue), 70%, 44%);
+
+	--secondary: hsl(var(--secondary-hue), 68%, 50%);
+	--secondary-light: hsl(var(--secondary-hue), 70%, 70%);
+	--secondary-dark: hsl(var(--secondary-hue), 70%, 40%);
+
+	/* Neutral */
+	--white: hsl(var(--neutral-light-hue), 0%, 99%);
+	--snow: hsl(var(--neutral-dark-hue), 20%, 98%);
+	--pale-grey: hsl(var(--neutral-dark-hue), 11%, 95%);
+	--light-grey: hsl(var(--neutral-dark-hue), 2%, 89%);
+	--grey: hsl(var(--neutral-dark-hue), 3%, 85%);
+	--dark-grey: hsl(var(--neutral-dark-hue), 1%, 67%);
+	--balck: hsl(var(--neutral-dark-hue), 6%, 10%);
+
+	/* SPACING */
+	--space-normal: 1rem;
+	--space-xxs: calc(1rem / 4);
+	--space-xs: calc(1rem / 3);
+	--space-sm: calc(1rem / 2);
+	--space-md: calc(1rem * 2);
+	--space-lg: calc(1rem * 3);
+	--space-xl: calc(1rem * 4);
+
+	/* SHADOWS */
+
+	--shadow-light-glow-small: 0px 2px 10px hsl(--shadow-color);
+	--shadow-light-bottom: 0px 2px 4px hsl(--shadow-color);
+	--shadow-light-glow-large: 0px 12px 24px hsl(--shadow-color);
+	--shadow-light-left: -12px 12px 34px hsl(--shadow-color);
+}
