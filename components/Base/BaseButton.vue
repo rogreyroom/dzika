@@ -50,13 +50,13 @@ export default {
   --button-hover-background: var(--white);
   --button-active-background: var(--primary-dark);
   --button-font-face: var(--ff-secondary);
-  --button-font-size: var(--body-normal);
+  --button-font-size: var(--body-small);
   --button-font-weight: var(--fw-normal);
   --button-text-color: var(--white);
   --button-hover-text-color: var(--primary);
   --button-active-text-color: var(--white);
   --button-min-width: 10ch;
-  --button-min-height: 44px;
+  --button-min-height: 34px;
   --button-padding: 0.088em var(--space-normal);
   --button-padding-extra: 0.1em var(--space-lg);
   --button-border-size: 1px solid;
@@ -68,6 +68,12 @@ export default {
   --button-hover-shadow: 0 0 0 1.5rem var(--white-alpha);
   --button-transition: 0.5s ease;
   --button-hover-animation: pulse 1s;
+
+  @media (min-width: 786px) {
+    --button-font-size: var(--body-normal);
+    --button-padding: 0.088em var(--space-normal);
+    --button-padding-extra: 0.1em var(--space-xl);
+  }
 
   text-decoration: none;
   padding: 0;
