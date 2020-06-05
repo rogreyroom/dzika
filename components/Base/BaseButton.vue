@@ -45,107 +45,104 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// background: aqua;
-// display: flex;
-// height: 32px;
-// width: 65%;
-// position: fixed;
-// bottom: calc(var(--spacing) * 2);
-// z-index: 10;
-// left: 50%;
-// transform: translateX(-50%);
-// text-align: center;
-// border: 1px solid darkblue;
-// border-radius: 16px;
-// box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
+.button {
+  --button-background: var(--primary);
+  --button-hover-background: var(--white);
+  --button-active-background: var(--primary-dark);
+  --button-font-face: var(--ff-secondary);
+  --button-font-size: var(--body-normal);
+  --button-font-weight: var(--fw-normal);
+  --button-text-color: var(--white);
+  --button-hover-text-color: var(--primary);
+  --button-active-text-color: var(--white);
+  --button-min-width: 10ch;
+  --button-min-height: 44px;
+  --button-padding: 0.088em var(--space-normal);
+  --button-padding-extra: 0.1em var(--space-lg);
+  --button-border-size: 1px solid;
+  --button-border-radius: 22px;
+  --button-border-color: var(--primary);
+  --button-outline-size: 0 0 0 4px;
+  --button-outline-color: var(--secondary);
+  --button-shadow: 0 0 1rem var(--primary-alpha);
+  --button-hover-shadow: 0 0 0 1.5rem var(--white-alpha);
+  --button-transition: 0.5s ease;
+  --button-hover-animation: pulse 1s;
 
-// justify-content: center;
+  text-decoration: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--button-background);
+  border: var(--button-border-size) var(--button-border-color);
+  color: var(--button-text-color);
+  min-width: var(--button-min-width);
+  min-height: var(--button-min-height);
+  padding: var(--button-padding);
+  text-align: center;
+  line-height: 1.1;
+  transition: var(--button-transition);
 
-// .button {
-//   // reset
-//   text-decoration: none;
-//   // border: none;
-//   // background-color: transparent;
-//   // font-family: inherit;
-//   padding: 0;
-//   cursor: pointer;
+  &:hover {
+    --button-background: var(--button-hover-background);
+    --button-text-color: var(--button-hover-text-color);
 
-//   // display
-//   display: inline-flex;
-//   align-items: center;
-//   justify-content: center;
+    animation: var(--button-hover-animation);
+    box-shadow: var(--button-hover-shadow);
+  }
 
-//   // visual
-//   background-color: var(--c-button-bg);
-//   color: var(--c-button-text);
-//   border: 1px solid var(--c-button-border);
+  &:focus {
+    outline: var(--button-outline-color);
+    box-shadow: var(--button-outline-size) var(--button-outline-color);
+  }
 
-//   // size
-//   padding: 0.088em 2.25em;
-//   // width: 100%;
-//   // min-height: 100%;
-//   min-width: 10ch;
-//   min-height: 44px;
+  &:active {
+    --button-background: var(--button-active-background);
+    --button-text-color: var(--button-active-text-color);
+  }
 
-//   // text
-//   text-align: center;
-//   line-height: 1.1;
+  &--radius {
+    border-radius: var(--button-border-radius);
+  }
 
-//   // effects
-//   // transition: 220ms all ease-in-out;
-//   transition: 0.5s ease;
+  &--shadow {
+    box-shadow: var(--button-shadow);
+  }
 
-//   &:hover {
-//     --c-button-text: #{$c-button-bg};
-//     --c-button-bg: #{$c-button-text};
+  &--left-text {
+    justify-content: flex-start;
+  }
 
-//     // background-color: $c-button-hover-bg;
-//     // background: $c-white;
-//     animation: pulse 1s;
-//     box-shadow: 0 0 0 1.5rem rgba(252, 255, 255, 0.1);
+  &--extra-size {
+    padding: var(--button-padding-extra);
+  }
 
-//     // .button__body {
-//     //   color: $c-button-bg;
-//     // }
-//   }
+  &--full-width {
+    width: 100%;
+  }
 
-//   &:focus {
-//     outline: var(--c-button-bg);
-//     box-shadow: 0 0 0 4px var(--c-button-outline);
-//   }
+  &__body {
+    display: block;
+    font-family: var(--button-font-face);
+    font-size: var(--button-font-size);
+    font-weight: var(--button-font-weight);
+  }
 
-//   &:active {
-//     --c-button-text: #{$c-button-bg};
-//     --c-button-bg: #{$c-button-text};
-//   }
+  &__prepend {
+    display: block;
+    margin-right: 0.5em;
+  }
+  &__append {
+    display: block;
+    margin-left: 0.5em;
+  }
+}
 
-//   &--radius {
-//     border-radius: 22px;
-//   }
-
-//   &--shadow {
-//     box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
-//   }
-
-//   &__body {
-//     display: block;
-//     font-family: $body-font;
-//     font-size: $normal-fs;
-//   }
-
-//   &__prepend {
-//     display: block;
-//     margin-right: 0.5em;
-//   }
-//   &__append {
-//     display: block;
-//     margin-left: 0.5em;
-//   }
-// }
-
-// @keyframes pulse {
-//   0% {
-//     box-shadow: 0 0 0 0 $c-button-bg;
-//   }
-// }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--button-background);
+  }
+}
 </style>
