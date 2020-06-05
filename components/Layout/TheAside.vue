@@ -53,52 +53,50 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .social {
-//   // grid-column: 2 / 3;
-//   // grid-row: 2 / 3;
-//   display: flex;
-//   flex-direction: column;
-//   justify-self: end;
-//   align-self: end;
+.social {
+  --social-icon-background: var(--dark-grey);
+  --social-hover-link-background: var(--primary);
+  --social-link-margin: var(--space-normal);
+  --social-link-margin-bottom: var(--space-sm);
 
-//   @media (min-width: 1024px) {
-//     flex-direction: row;
-//     justify-self: flex-start;
-//   }
+  display: flex;
+  flex-direction: column;
+  justify-self: end;
+  align-self: end;
 
-//   &__link {
-//     // reset
-//     text-decoration: none;
-//     background-color: transparent;
-//     font-family: inherit;
-//     padding: 0;
-//     cursor: pointer;
+  @media (min-width: 1024px) {
+    flex-direction: row;
+    justify-self: flex-start;
+  }
 
-//     display: block;
-//     // width: 24px;
-//     // height: 24px;
-//     margin-bottom: 10px;
-//     margin-right: var(--spacing);
+  &__link {
+    text-decoration: none;
+    background-color: transparent;
+    font-family: inherit;
+    padding: 0;
+    cursor: pointer;
+    display: block;
+    margin-bottom: var(--social-link-margin-small);
+    margin-right: var(--social-link-margin);
+    transition: 220ms all ease-in-out;
 
-//     transition: 220ms all ease-in-out;
+    &:hover > .social__icon path {
+      fill: var(--social-hover-link-background);
+    }
 
-//     &:hover > .social__icon path {
-//       fill: $c-icon-hover-bg;
-//     }
+    @media (min-width: 1024px) {
+      margin-right: var(--social-link-margin-small);
+      margin-left: var(--social-link-margin-small);
+    }
+  }
 
-//     @media (min-width: 1024px) {
-//       margin-right: 10px;
-//       margin-left: 10px;
-//     }
-//   }
+  &__icon {
+    width: 24px;
+    height: 24px;
 
-//   &__icon {
-//     width: 24px;
-//     height: 24px;
-
-//     path {
-//       fill: $c-grey;
-//     }
-//   }
-// }
+    path {
+      fill: var(--social-icon-background);
+    }
+  }
+}
 </style>
