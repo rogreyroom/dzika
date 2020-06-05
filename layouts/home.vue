@@ -2,7 +2,6 @@
   <div class="container">
     <header class="header">
       <base-logo />
-      <the-navigation />
     </header>
 
     <nuxt class="main" />
@@ -13,28 +12,14 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
 import BaseLogo from '~/components/Base/BaseLogo.vue'
-import TheNavigation from '~/components/HomePage/TheNavigation.vue'
 import TheAside from '~/components/Layout/TheAside.vue'
 import TheFooter from '~/components/Layout/TheFooter.vue'
 export default {
   components: {
     BaseLogo,
-    TheNavigation,
     TheAside,
     TheFooter
-  },
-  computed: {
-    ...mapState(['isHome'])
-  },
-  created () {
-    this.$nuxt.$route.path === '/'
-      ? this.SET_IS_HOME(true)
-      : this.SET_IS_HOME(false)
-  },
-  methods: {
-    ...mapMutations(['SET_IS_HOME'])
   }
 }
 </script>
@@ -69,7 +54,6 @@ export default {
 }
 .aside {
   grid-area: aside;
-  // grid-row: header-start;
 }
 .footer {
   grid-area: footer;
