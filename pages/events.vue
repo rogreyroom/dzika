@@ -40,7 +40,7 @@
           v-for="({event_menu_name, event_menu_description, event_menu_price, event_menu_photo}, index) in event_menu"
           :key="index"
         >
-          <event
+          <the-event
             :index="index + 1"
             :name="event_menu_name"
             :description="event_menu_description"
@@ -71,7 +71,7 @@
       </section>
     </section>
     <div class="nav-button">
-      <nav-button
+      <base-button
         :title="getNavigationTitle"
         :url="url"
         class="button--radius button--shadow"
@@ -82,13 +82,13 @@
 
 <script>
 import { mapState, mapGetters } from 'vuex'
-import NavButton from '~/components/NavButton.vue'
-import Event from '~/components/Events/Event'
+import BaseButton from '~/components/Base/BaseButton.vue'
+import TheEvent from '~/components/EventsPage/TheEvent'
 
 export default {
   components: {
-    NavButton,
-    Event
+    BaseButton,
+    TheEvent
   },
   data () {
     return {

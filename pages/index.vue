@@ -33,14 +33,14 @@
       </picture>
 
       <header class="home__header">
-        <slogan
+        <the-slogan
           :home-title="home_page_title"
           :cta-title="cta_phone_text"
           :cta-phone="cta_phone_number"
           class="home__slogan"
         />
       </header>
-      <navigation class="home__navigation" />
+      <the-navigation class="home__navigation" />
       <section class="home__body">
         <h4 class="home__text">
           {{ company_opening_hours_header }}
@@ -60,14 +60,14 @@
 
 <script>
 import { mapState } from 'vuex'
-import Slogan from '~/components/Home/Slogan.vue'
-import Navigation from '~/components/Home/Navigation/Navigation.vue'
+import TheSlogan from '~/components/HomePage/TheSlogan.vue'
+import TheNavigation from '~/components/HomePage/TheNavigation.vue'
 
 export default {
   layout: 'main',
   components: {
-    Slogan,
-    Navigation
+    TheSlogan,
+    TheNavigation
   },
   data () {
     return {

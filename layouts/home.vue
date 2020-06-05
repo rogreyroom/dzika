@@ -1,29 +1,29 @@
 <template>
   <div class="container">
     <header class="header">
-      <site-logo />
-      <site-navigation v-if="!isHome" />
+      <base-logo />
+      <the-navigation />
     </header>
 
     <nuxt class="main" />
 
-    <site-aside class="aside" />
-    <site-footer class="footer" />
+    <the-aside class="aside" />
+    <the-footer class="footer" />
   </div>
 </template>
 
 <script>
 import { mapState, mapMutations } from 'vuex'
-import SiteLogo from '~/components/Layout/Logo.vue'
-import SiteNavigation from '~/components/Home/Navigation/Navigation.vue'
-import SiteAside from '~/components/Layout/Aside.vue'
-import SiteFooter from '~/components/Layout/Footer.vue'
+import BaseLogo from '~/components/Base/BaseLogo.vue'
+import TheNavigation from '~/components/HomePage/TheNavigation.vue'
+import TheAside from '~/components/Layout/TheAside.vue'
+import TheFooter from '~/components/Layout/TheFooter.vue'
 export default {
   components: {
-    SiteLogo,
-    SiteNavigation,
-    SiteAside,
-    SiteFooter
+    BaseLogo,
+    TheNavigation,
+    TheAside,
+    TheFooter
   },
   computed: {
     ...mapState(['isHome'])
