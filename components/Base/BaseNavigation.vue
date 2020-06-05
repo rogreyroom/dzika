@@ -11,11 +11,11 @@
       :key="index"
       class="menu__item"
     >
-      <nav-link
+      <!-- <nav-link
         :title="item.title"
         :url="item.url"
         class="menu__link"
-      />
+      /> -->
     </li>
     <!-- </div> -->
   </ul>
@@ -23,11 +23,11 @@
 
 <script>
 import { mapState } from 'vuex'
-import NavLink from '~/components/Home/Navigation/NavLink.vue'
+// import NavLink from '~/components/Home/Navigation/NavLink.vue'
 
 export default {
   components: {
-    NavLink
+    // NavLink
   },
   data () {
     return {

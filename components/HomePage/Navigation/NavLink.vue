@@ -1,5 +1,5 @@
 <template>
-  <nuxt-link
+  <!-- <nuxt-link
     :to="url"
     class="button"
   >
@@ -18,30 +18,30 @@
     >
       {{ append }}
     </span>
-  </nuxt-link>
+  </nuxt-link> -->
 </template>
 
 <script>
-export default {
-  props: {
-    url: {
-      type: String,
-      default: ''
-    },
-    title: {
-      type: String,
-      default: ''
-    },
-    prepend: {
-      type: String,
-      default: ''
-    },
-    append: {
-      type: String,
-      default: ''
-    }
-  }
-}
+// export default {
+//   props: {
+//     url: {
+//       type: String,
+//       default: ''
+//     },
+//     title: {
+//       type: String,
+//       default: ''
+//     },
+//     prepend: {
+//       type: String,
+//       default: ''
+//     },
+//     append: {
+//       type: String,
+//       default: ''
+//     }
+//   }
+// }
 </script>
 
 <style lang="scss" scoped>
