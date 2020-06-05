@@ -5,22 +5,22 @@
       :key="index"
       class="menu__item"
     >
-      <!-- <nav-link
+      <base-button
         :title="item.title"
         :url="item.url"
-        class="menu__link"
-      /> -->
+        class="button--left-text button--full-width"
+      />
     </li>
   </ul>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-// import NavLink from '~/components/Home/Navigation/NavLink.vue'
+import BaseButton from '~/components/Base/BaseButton.vue'
 
 export default {
   components: {
-    // NavLink
+    BaseButton
   },
   data () {
     return {
@@ -33,49 +33,34 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .menu {
-//   margin: 0;
-//   padding: 0;
-//   display: flex;
-//   flex-direction: column;
-// }
+.menu {
+  --list-item-bottom-margin: var(--space-normal);
+  --list-item-hover-shadow: 0 0 0 1.5rem var(--white-alpha);
+  --list-item-outline-size: 0 0 0 4px;
+  --list-item-outline-color: var(--secondary);
 
-// .menu__item {
-//   display: block;
-//   height: 32px;
-//   width: 100%;
-//   // line-height: 32px;
-//   // background: var(--c-red);
-//   margin-bottom: 16px;
-//   // border: 1px solid $c-red;
-//   // transition: 0.5s ease;
-//   // background: aqua;
-//   &:last-child {
-//     margin-bottom: 0;
-//   }
-// }
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
 
-// .menu__item:hover {
-//   background: none;
-//   animation: pulse 1s;
-//   box-shadow: 0 0 0 1.5rem rgba(252, 255, 255, 0.1);
-// }
+  &__item {
+    display: block;
+    margin-bottom: var(--list-item-bottom-margin);
+    &:last-child {
+      margin-bottom: 0;
+    }
 
-// .menu__item:hover .menu__link {
-//   color: $c-red;
-//   font-weight: $fw-semibold;
-// }
+    &:hover {
+      animation: pulse 1s;
+      box-shadow: var(--list-item-hover-shadow);
+    }
+  }
+}
 
-// @keyframes pulse {
-//   0% {
-//     box-shadow: 0 0 0 0 $c-red;
-//   }
-// }
-
-// .menu__link {
-//   font-weight: $fw-normal;
-//   line-height: 32px;
-//   padding-left: 20px;
-//   color: $c-white;
-// }
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 var(--primary);
+  }
+}
 </style>
