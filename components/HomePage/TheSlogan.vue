@@ -30,40 +30,48 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .slogan {
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: flex-start;
-//   margin-left: var(--spacing);
-// }
+.slogan {
+  --slogan-title-font-face: var(--ff-secondary);
+  --slogan-title-font-size: var(--body-small);
+  --slogan-title-font-weight: var(--fw-normal);
+  --slogan-title-margin: var(--space-md);
+  --slogan-subtitle-font-face: var(--ff-primary);
+  --slogan-subtitle-font-size: var(--title-small);
+  --slogan-subtitle-font-weight: var(--fw-normal);
+  --slogan-subtitle-shadow: 0px 0px 10px var(--black-alpha);
 
-// .slogan__title {
-//   font-size: $normal-fs;
-//   font-weight: $fw-normal;
-//   margin: 0;
-//   margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
-//   @media (min-width: 1024px) {
-//     margin-bottom: var(--spacing);
-//   }
-// }
+  &__title {
+    font-family: var(--slogan-title-font-face);
+    font-size: var(--slogan-title-font-size);
+    font-weight: var(--slogan-title-font-weight);
+    margin: 0;
+    margin-bottom: var(--slogan-title-margin);
 
-// .slogan__sub-title {
-//   font-family: $header-font;
-//   font-size: $h3-fs;
-//   font-weight: $fw-normal;
-//   margin: 0;
-//   width: min-content;
-//   // text-shadow: 0px 2px 10px rgba(26, 23, 23, 0.25);
-//   text-shadow: 0px 0px 10px rgba(26, 23, 23, 0.15);
+    @media (min-width: 1024px) {
+      --slogan-title-margin: var(--space-lg);
+    }
+  }
 
-//   span {
-//     display: inline-block;
-//     width: max-content;
-//   }
+  &__sub-title {
+    font-family: var(--slogan-subtitle-font-face);
+    font-size: var(--slogan-subtitle-font-size);
+    font-weight: var(--slogan-subtitle-font-weight);
+    margin: 0;
+    width: min-content;
+    text-shadow: var(--slogan-subtitle-shadow);
 
-//   @media (min-width: 1024px) {
-//     font-size: $h1-fs;
-//   }
-// }
+    span {
+      display: inline-block;
+      width: max-content;
+    }
+
+    @media (min-width: 1024px) {
+      --slogan-subtitle-font-size: var(--title-large);
+    }
+  }
+}
 </style>
