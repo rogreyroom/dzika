@@ -1,29 +1,14 @@
-/* eslint-disable vue/no-v-html */
 <template>
   <main class="main">
     <section class="home">
-      <!-- <img
-        alt="Bardzo smaczna Pizza z Restauracji Dzika róża"
-        class="home__hero"
-        srcset="
-          /img/pizza-small.png 250h,
-          /img/pizza.png 300h"
-        sizes="(min-width: 320px) 768px 1024px 1440px"
-        src="/img/pizza.png"
-      > -->
-
       <picture class="home__hero">
-        <source
-          srcset="/img/pizza-small.png"
-          media="(max-width: 767px)"
-        >
-        <source
-          srcset="/img/pizza.png"
-          media="(max-width: 1023px)"
-        >
         <source
           srcset="/img/pizza.png"
           media="(min-width: 1024px)"
+        >
+        <source
+          srcset="/img/pizza-medium.png"
+          media="(min-width: 320px) and (min-height: 736px)"
         >
         <img
           src="/img/pizza-small.png"
@@ -31,7 +16,6 @@
           class="home__hero"
         >
       </picture>
-
       <header class="home__header">
         <the-slogan
           :home-title="home_page_title"
@@ -45,11 +29,11 @@
         <h4 class="home__text">
           {{ company_opening_hours_header }}
         </h4>
-        <p
+        <div
           class="home__text"
           v-html="$md.render(company_opening_hours)"
         />
-        <p
+        <div
           class="home__text"
           v-html="$md.render(company_address)"
         />
@@ -64,7 +48,7 @@ import TheSlogan from '~/components/HomePage/TheSlogan.vue'
 import TheNavigation from '~/components/HomePage/TheNavigation.vue'
 
 export default {
-  layout: 'main',
+  layout: 'home',
   components: {
     TheSlogan,
     TheNavigation
@@ -87,190 +71,100 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .main {
-//   grid-area: main;
-//   grid-column: 1 / 3;
-//   grid-row: header-start / aside-end;
-// }
-// .home {
-//   display: grid;
-//   grid-template-columns: 1fr var(--home-hero-image-size);
-//   // grid-template-rows: min-content 1fr auto 1fr;
-//   grid-template-rows: max-content min-content 1fr;
-//   grid-template-areas:
-//     'header hero'
-//     'menu .'
-//     'body .';
-//   min-height: 100%;
-//   overflow-x: hidden;
+.main {
+  grid-column: 1 / 3;
+  grid-row: header-start / aside-end;
+}
 
-//   // @media (min-width: 1024px) {
-//   //   --home-hero-image-size: 150px;
-//   //   grid-template-areas:
-//   //     'header hero'
-//   //     'menu .'
-//   //     '. body';
-//   // }
+.home {
+  --home-body-text-font-face: var(--ff-secondary);
+  --home-body-text-font-size: var(--body-small);
+  --home-body-text-font-weight: var(--fw-normal);
+  --home-body-text-padding: var(--space-xs) 0;
+  --home-spacing: var(--space-normal);
+  --home-hero-image-size: 80px;
+  --logo-height: 45px;
 
-//   @media (min-height: 736px) {
-//     --home-hero-image-size: 100px;
-//     grid-template-rows: 1fr min-content 1fr;
-//   }
+  display: grid;
+  grid-template-columns: 1fr var(--home-hero-image-size);
+  grid-template-rows: var(--logo-height) max-content min-content 1fr;
+  grid-template-areas:
+    '. hero'
+    'header hero'
+    'menu .'
+    'body .';
+  min-height: 100%;
+  overflow-x: hidden;
 
-//   @media (min-width: 768px) {
-//     --home-hero-image-size: 300px;
-//     grid-template-rows: max-content min-content 1fr;
-//   }
+  @media (min-width: 768px) {
+    --home-hero-image-size: 200px;
+    --home-spacing: var(--space-lg);
+  }
 
-//   @media (min-width: 1024px) {
-//     --home-hero-image-size: 400px;
-//     grid-template-areas:
-//       'header hero'
-//       'menu body';
-//   }
+  @media (min-width: 1024px) {
+    --home-hero-image-size: 400px;
+    grid-template-rows: var(--logo-height) max-content 1fr;
+    grid-template-areas:
+      '. hero'
+      'header hero'
+      'menu body';
+  }
 
-//   @media (min-width: 1025px) {
-//     --home-hero-image-size: calc(500px + var(--spacing));
-//   }
+  @media (min-width: 1024px) {
+    --home-hero-image-size: 500px;
+    grid-template-columns: repeat(2, 1fr);
+  }
 
-//   &__header {
-//     grid-area: header;
-//     display: flex;
-//     justify-content: flex-start;
-//     align-items: center;
-//     margin-top: calc(32px + var(--spacing));
+  &__hero {
+    grid-area: hero;
+    min-height: 250px;
+    object-fit: none;
+    object-position: left center;
+    filter: drop-shadow(var(--shadow-light-glow-large));
 
-//     // display: grid;
-//     // grid-template-columns: 1fr var(--home-hero-image-size);
-//     // grid-template-areas: 'copy hero';
-//     // grid-auto-flow: dense;
-//   }
+    @media (min-height: 736px) {
+      min-height: 320px;
+    }
 
-//   &__hero {
-//     grid-area: hero;
-//     min-height: 250px;
-//     object-fit: none;
-//     object-position: left center;
-//     filter: drop-shadow(0px 12px 24px rgba(179, 179, 179, 0.89));
+    @media (min-height: 768px) {
+      min-height: 440px;
+    }
 
-//     @media (min-width: 1024px) {
-//       padding-right: 100px;
-//     }
-//   }
+    @media (min-width: 1024px) {
+      padding-top: var(--space-md);
+    }
+  }
 
-//   &__slogan {
-//     grid-area: copy;
-//     // align-self: center;
-//     // margin-top: max(1.25rem, 3rem);
-//   }
+  &__header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: var(--home-spacing);
+  }
 
-//   &__navigation {
-//     grid-area: menu;
-//     // margin: 1rem 1rem 1rem 0;
-//     @media (min-width: 1024px) {
-//       width: 80%;
-//     }
-//   }
+  &__navigation {
+    grid-area: menu;
+  }
 
-//   &__body {
-//     grid-area: body;
-//     align-self: center;
-//     grid-auto-flow: dense;
-//     // display: flex;
-//     // flex-direction: column;
-//     // align-content: center;
-//     padding-top: var(--spacing);
-//     padding-left: var(--spacing);
-//     // padding-top: 50%;
+  &__body {
+    grid-area: body;
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding-left: var(--home-spacing);
+  }
 
-//     @media (min-height: 736px) {
-//       align-self: start;
-//       padding-top: calc(var(--spacing) * 2);
-//     }
+  &__text {
+    font-family: var(--home-text-font-face);
+    font-size: var(--home-text-font-size);
+    font-weight: var(--home-text-font-weight);
+    padding: var(--home-body-text-padding);
 
-//     @media (min-width: 1024px) {
-//       // align-self: start;
-//       padding: 0;
-//       padding-top: calc(var(--spacing) / 2);
-//       // margin-top: var(--spacing);
-//     }
-//   }
-
-//   &__text {
-//     font-size: $normal-fs;
-//     margin: 0;
-//   }
-// }
-
-// $image-size: 80px;
-
-// .container {
-//   min-height: 100vh;
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr) $image-size;
-//   grid-template-rows: auto auto minmax(min-content, 1fr) auto;
-//   grid-template-areas:
-//     'header header header'
-//     'nav nav .'
-//     'main main aside'
-//     'footer footer footer';
-// }
-// .header {
-//   grid-area: header;
-//   display: grid;
-//   grid-template-columns: repeat(2, 1fr) $image-size;
-//   grid-template-rows: auto 1fr;
-//   grid-template-areas:
-//     'logo logo image'
-//     'slogan slogan image';
-
-//   &__logo {
-//     grid-area: logo;
-//     margin-top: var(--spacing);
-//     margin-left: var(--spacing);
-//   }
-
-//   &__image {
-//     grid-area: image;
-//     height: 250px;
-//     object-fit: none;
-//     object-position: left center;
-//   }
-
-//   &__slogan {
-//     grid-area: slogan;
-//     margin-left: var(--spacing);
-//   }
-// }
-
-// .navigation {
-//   grid-area: nav;
-// }
-
-// .main {
-//   grid-area: main;
-// }
-
-// .home {
-//   margin-left: var(--spacing);
-//   margin-bottom: var(--spacing);
-
-//   &__section {
-//     margin-top: 1rem;
-//   }
-
-//   &__text {
-//     font-size: $normal-fs;
-//     margin: 0;
-//   }
-// }
-
-// .aside {
-//   grid-area: aside;
-// }
-
-// .footer {
-//   grid-area: footer;
-//   bottom: 0;
-// }
+    @media (min-height: 768px) {
+      --home-text-font-size: var(--body-normal);
+    }
+  }
+}
 </style>
