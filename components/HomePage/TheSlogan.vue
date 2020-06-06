@@ -38,7 +38,7 @@ export default {
   --slogan-subtitle-font-face: var(--ff-primary);
   --slogan-subtitle-font-size: var(--title-small);
   --slogan-subtitle-font-weight: var(--fw-normal);
-  --slogan-subtitle-shadow: 0px 0px 10px var(--black-alpha);
+  --slogan-subtitle-shadow: var(--shadow-light-glow-small);
 
   display: flex;
   flex-direction: column;
@@ -50,6 +50,11 @@ export default {
     font-weight: var(--slogan-title-font-weight);
     margin: 0;
     margin-bottom: var(--slogan-title-margin);
+
+    @media (min-height: 768px) {
+      --slogan-title-font-size: var(--body-normal);
+      --slogan-subtitle-font-size: var(--title-normal);
+    }
 
     @media (min-width: 1024px) {
       --slogan-title-margin: var(--space-lg);
