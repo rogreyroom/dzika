@@ -47,6 +47,7 @@ export default {
   &__item {
     display: block;
     margin-bottom: var(--list-item-bottom-margin);
+
     &:last-child {
       margin-bottom: 0;
     }
@@ -54,6 +55,12 @@ export default {
     &:hover {
       animation: pulse 1s;
       box-shadow: var(--list-item-hover-shadow);
+    }
+
+    @media (min-width: 768px) {
+      .button {
+        padding-left: var(--space-lg);
+      }
     }
   }
 }
