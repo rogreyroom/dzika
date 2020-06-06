@@ -57,7 +57,7 @@ export default {
   --social-icon-background: var(--dark-grey);
   --social-hover-link-background: var(--primary);
   --social-link-margin: var(--space-normal);
-  --social-link-margin-bottom: var(--space-sm);
+  --social-link-margin-small: var(--space-sm);
 
   display: flex;
   flex-direction: column;
@@ -86,7 +86,7 @@ export default {
 
     @media (min-width: 1024px) {
       margin-right: var(--social-link-margin-small);
-      margin-left: var(--social-link-margin-small);
+      margin-left: var(--social-link-margin);
     }
   }
 
