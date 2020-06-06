@@ -47,6 +47,9 @@ export default {
 }
 .header {
   grid-area: header;
+  padding-top: var(--space-sm);
+  padding-left: var(--space-sm);
+  padding-right: var(--space-sm);
   z-index: 10;
 }
 .main {
