@@ -1,1 +1,12 @@
-{}
+{
+  "menu_page_title": "Pizza",
+  "category": [
+    {
+      "food_name": "Margarita",
+      "food_description": "dobra",
+      "food_size": "mała",
+      "food_price": "12pln"
+    }
+  ],
+  "menu_page_subtitle": "podtytuł ?"
+}
