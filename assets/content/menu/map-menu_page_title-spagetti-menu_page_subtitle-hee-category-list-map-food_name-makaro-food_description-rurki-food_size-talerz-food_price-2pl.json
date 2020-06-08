@@ -1,0 +1,12 @@
+{
+  "menu_page_title": "Spagetti",
+  "menu_page_subtitle": "hee",
+  "category": [
+    {
+      "food_name": "Makaro",
+      "food_description": "rurki",
+      "food_size": "talerz",
+      "food_price": "2pl"
+    }
+  ]
+}
