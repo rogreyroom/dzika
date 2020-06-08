@@ -47,26 +47,6 @@
             :price="event_menu_price"
             :photo="event_menu_photo"
           />
-          <!-- <section
-            :data-before-content="index + 1"
-            class="event__section"
-          >
-            <h3 class="event__header">
-              {{ event_menu_name }}
-            </h3>
-            <p class="event__body">
-              {{ event_menu_description }}
-            </p>
-            <p class="event__price">
-              {{ event_menu_price }}pln
-            </p>
-          </section>
-
-          <img
-            class="event__image"
-            :src="event_menu_photo"
-            :alt="`Zdjęcie przedstawiające zestaw ${event_menu_name}`"
-          > -->
         </div>
       </section>
     </section>
@@ -112,198 +92,141 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .main {
-//   grid-area: main;
-// }
+.events {
+  --events-title-font-face: var(--ff-secondary);
+  --events-title-font-size: var(--title-small);
+  --events-title-font-weight: var(--fw-normal);
+  --events-body-font-face: var(--ff-secondary);
+  --events-body-font-size: var(--body-small);
+  --events-body-font-weight: var(--fw-normal);
+  --events-phone-font-face: var(--ff-primary);
+  --events-phone-font-size: var(--title-small);
+  --events-phone-font-weight: var(--fw-normal);
+  --events-phone-underline-color: var(--primary);
+  --events-margin: var(--space-normal);
+  --events-big-margin: var(--space-lg);
+  --events-padding: var(--space-normal);
 
-// .nav-button {
-//   // background: aqua;
-//   display: flex;
-//   justify-content: center;
-//   position: fixed;
-//   bottom: 50px;
-//   left: 50%;
-//   transform: translateX(-50%);
-//   width: 100%;
-//   // display: flex;
-//   // height: 32px;
-//   // width: 65%;
-//   // position: fixed;
-//   // bottom: calc(var(--spacing) * 2);
-//   // z-index: 10;
-//   // left: 50%;
-//   // transform: translateX(-50%);
-//   // text-align: center;
-//   // border: 1px solid darkblue;
-//   // border-radius: 16px;
-//   // box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--events-padding);
 
-//   // justify-content: center;
-// }
+  @media (min-width: 1024px) {
+    --events-padding: var(--space-lg);
+  }
 
-// .events {
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   padding: var(--spacing);
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--events-big-margin);
 
-//   &__header {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     margin-bottom: var(--spacing);
+    @media (min-width: 768px) {
+      width: 50%;
+      align-self: flex-start;
+    }
+  }
 
-//     @media (min-width: 768px) {
-//       width: 50%;
-//       align-self: flex-start;
-//     }
-//   }
+  &__title {
+    font-family: var(--events-title-font-face);
+    font-size: var(--events-title-font-size);
+    font-weight: var(--events-title-font-weight);
+    margin-bottom: var(--events-margin);
+  }
 
-//   &__title {
-//     font-size: $large-fs;
-//     font-family: $body-font;
-//     font-weight: $fw-semibold;
-//   }
+  &__body {
+    font-family: var(--events-body-font-face);
+    font-size: var(--events-body-font-size);
+    font-weight: var(--events-body-font-weight);
+    text-align: center;
+    margin-bottom: var(--events-margin);
+  }
 
-//   &__body {
-//     font-size: $small-fs;
-//     text-align: center;
-//   }
+  &__phone {
+    font-family: var(--events-phone-font-face);
+    font-size: var(--events-phone-font-size);
+    font-weight: var(--events-phone-font-weight);
+    position: relative;
 
-//   &__phone {
-//     font-family: $header-font;
-//     font-size: $h4-fs;
-//     position: relative;
+    &::after {
+      content: '';
+      display: block;
+      width: 70%;
+      height: 1.5px;
+      background: var(--events-phone-underline-color);
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 
-//     &::after {
-//       content: '';
-//       display: block;
-//       width: 70%;
-//       height: 1.5px;
-//       background: $c-red;
-//       position: absolute;
-//       top: calc(var(--spacing) * 1.5);
-//       left: 50%;
-//       transform: translateX(-50%);
+  &__hero {
+    //     display: none;
+    //     // align-content: center;
+    //     position: absolute;
+    //     right: 0;
+    //     top: 0;
+    //     // max-width: 100%;
+    //     width: 350px;
+    //     height: 250px;
 
-//       @media (min-width: 768px) {
-//         top: var(--spacing);
-//       }
+    //     // overflow: hidden;
+    //     // border-radius: 0 0 0 100px;
 
-//       @media (min-width: 1024px) {
-//         top: calc(var(--spacing) / 2);
-//       }
-//     }
-//   }
+    //     // z-index: -1;
 
-//   &__hero {
-//     display: none;
-//     // align-content: center;
-//     position: absolute;
-//     right: 0;
-//     top: 0;
-//     // max-width: 100%;
-//     width: 350px;
-//     height: 250px;
+    //     @media (min-width: 768px) {
+    //       display: block;
+    //     }
 
-//     // overflow: hidden;
-//     // border-radius: 0 0 0 100px;
+    //     @media (min-width: 1024px) {
+    //       width: 450px;
+    //       height: 300px;
+    //     }
+    @media (min-width: 768px) {
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 350px;
+      height: 300px;
+    }
 
-//     // z-index: -1;
+    @media (min-width: 1024px) {
+      width: 500px;
+    }
 
-//     @media (min-width: 768px) {
-//       display: block;
-//     }
+    @media (min-width: 1600px) {
+      width: 700px;
+      height: 400px;
+    }
+  }
 
-//     @media (min-width: 1024px) {
-//       width: 450px;
-//       height: 300px;
-//     }
-//   }
+  &__image {
+    width: 90%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    object-position: center;
+    filter: drop-shadow(var(--shadow-light-glow));
 
-//   &__image {
-//     // object-fit: cover;
-//     // object-position: center;
-//     width: 100%;
-//     height: 100%;
-//     object-fit: cover;
-//     overflow: hidden;
-//     border-radius: 0 0 0 120px;
+    @media (min-width: 768px) {
+      // filter: none;
+      margin: 0;
+      width: 100%;
+      border-radius: 0 0 0 200px;
+    }
+  }
+}
+.event {
+  margin-top: var(--space-md);
+}
 
-//     // box-shadow: 0px 2px 4px rgba(179, 179, 179, 0.5);
-//     filter: drop-shadow(0px 12px 24px rgba(179, 179, 179, 0.89));
-//   }
-// }
-// .event {
-//   display: flex;
-//   flex-direction: column;
-
-//   &__set {
-//     // display: grid;
-//     // grid-template-areas: 'section image';
-//     // grid-template-columns: 1fr max(80px, min(300px, 500px));
-//     margin-bottom: var(--spacing);
-//   }
-
-//   &__section {
-//     grid-area: section;
-//     display: flex;
-//     flex-direction: column;
-//     background: rgba(rgb(247, 247, 247), 1.2);
-//     box-shadow: 0px 2px 4px rgba(179, 179, 179, 0.5);
-//     padding: var(--spacing) var(--spacing) calc(var(--spacing) / 2)
-//       var(--spacing);
-//     margin-top: calc(var(--spacing) * 2);
-//     margin-bottom: var(--spacing);
-//     position: relative;
-
-//     &::before {
-//       content: attr(data-before-content);
-//       // content: '1';
-//       position: absolute;
-//       top: -3rem;
-//       left: 0;
-//       font-family: $header-font;
-//       font-size: 6rem;
-//       color: $c-grey;
-//     }
-//   }
-
-//   &__header {
-//     font-family: $header-font;
-//     font-size: $h4-fs;
-//     font-weight: $fw-normal;
-//     text-align: center;
-//     margin: 0;
-//     // margin-top: var(--spacing);
-//   }
-
-//   &__body {
-//     font-size: $small-fs;
-//     text-align: center;
-//     margin: 0;
-//     margin-top: calc(var(--spacing) / 2);
-//   }
-
-//   &__price {
-//     font-family: $header-font;
-//     font-size: $normal-fs;
-//     color: $c-red;
-//     margin: 0;
-//     justify-self: flex-end;
-//     align-self: flex-end;
-//     margin-top: var(--spacing);
-//     // margin: 0 calc(var(--spacing) / 2) calc(var(--spacing) / 2) 0;
-//   }
-
-//   &__image {
-//     grid-area: image;
-//     border: 5px solid $c-black;
-//     max-width: 100%;
-//     width: 100%;
-//     max-height: 160px;
-//     object-fit: cover;
-//     box-shadow: 0px 6px 10px $c-grey;
-//   }
-// }
+.nav-button {
+  position: fixed;
+  bottom: var(--space-lg);
+  left: 50%;
+  transform: translateX(-50%);
+}
 </style>
