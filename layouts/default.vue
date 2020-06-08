@@ -13,7 +13,7 @@
 </template>
 
 <script>
-import { mapState, mapMutations } from 'vuex'
+// import { mapState, mapMutations } from 'vuex'
 import BaseLogo from '~/components/Base/BaseLogo.vue'
 import BaseNavigation from '~/components/Base/BaseNavigation.vue'
 import TheAside from '~/components/Layout/TheAside.vue'
@@ -26,15 +26,15 @@ export default {
     TheFooter
   },
   computed: {
-    ...mapState(['isHome'])
+    // ...mapState(['isHome'])
   },
   created () {
-    this.$nuxt.$route.path === '/'
-      ? this.SET_IS_HOME(true)
-      : this.SET_IS_HOME(false)
+    // this.$nuxt.$route.path === '/'
+    //   ? this.SET_IS_HOME(true)
+    //   : this.SET_IS_HOME(false)
   },
   methods: {
-    ...mapMutations(['SET_IS_HOME'])
+    // ...mapMutations(['SET_IS_HOME'])
   }
 }
 </script>
