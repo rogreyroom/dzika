@@ -4,7 +4,7 @@
       :data-before-content="index"
       class="event__section"
     >
-      <h3 class="event__header">
+      <h3 class="event__title">
         {{ name }}
       </h3>
       <p class="event__body">
@@ -26,7 +26,7 @@
 export default {
   props: {
     index: {
-      type: String,
+      type: [String, Number],
       default: ''
     },
     name: {
@@ -38,7 +38,7 @@ export default {
       default: ''
     },
     price: {
-      type: String,
+      type: [String, Number],
       default: ''
     },
     photo: {
@@ -51,124 +51,130 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .event {
-//   display: flex;
-//   flex-direction: column;
+.event {
+  &__set {
+    --event-title-font-face: var(--ff-primary);
+    --event-title-font-size: var(--title-small);
+    --event-title-font-weight: var(--fw-normal);
 
-//   &__set {
-//     // display: grid;
-//     // grid-template-areas: 'section image';
-//     // grid-template-columns: 1fr max(80px, min(300px, 500px));
-//     // margin-bottom: var(--spacing);
-//     margin-top: calc(var(--spacing) * 2);
-//     margin-bottom: var(--spacing);
+    --event-body-font-face: var(--ff-secondary);
+    --event-body-font-size: var(--body-small);
+    --event-body-font-weight: var(--fw-normal);
+    --event-price-font-face: var(--ff-primary);
+    --event-price-font-size: var(--title-extra-small);
+    --event-price-font-weight: var(--fw-normal);
+    --event-price-color: var(--primary);
 
-//     @media (min-width: 768px) {
-//       display: grid;
-//       // grid-template-areas: 'section image';
-//       grid-template-columns: repeat(4, 1fr);
-//       grid-template-rows: 1fr;
-//       align-items: center;
-//     }
-//   }
+    --event-set-margin: var(--space-lg);
 
-//   &__section {
-//     // grid-area: section;
-//     display: flex;
-//     flex-direction: column;
-//     background: rgba(rgb(247, 247, 247), 1.2);
-//     box-shadow: 0px 2px 4px rgba(179, 179, 179, 0.5);
-//     padding: var(--spacing) var(--spacing) calc(var(--spacing) / 2)
-//       var(--spacing);
+    --event-section-pseudo-color: var(--dark-grey);
+    --event-section-background: var(--pale-grey);
+    --event-section-padding: var(--space-lg) var(--space-normal) var(--space-sm)
+      var(--space-normal);
+    --event-section-margin: var(--space-lg) 0;
+    --event-section-shadow: var(--shadow-light-bottom);
 
-//     // border: 1px solid hsla(1, 68%, 48%, 0.61);
-//     // outline: 15px solid rgba(rgb(247, 247, 247), 0);
+    --event-body-margin: var(--space-normal) 0;
+    --event-image-border: 5px solid var(--black);
 
-//     position: relative;
+    --event-image-shadow: 0px 6px 10px var(--dark-grey);
 
-//     &::before {
-//       content: attr(data-before-content);
-//       // content: '1';
-//       position: absolute;
-//       top: -3rem;
-//       left: 0;
-//       font-family: $header-font;
-//       font-size: 6rem;
-//       color: $c-grey;
-//       z-index: 2;
-//     }
+    display: grid;
+    grid-template-areas: 'section' 'image';
+    grid-template-columns: minmax(auto, 400px);
+    margin-bottom: var(--event-set-margin);
 
-//     // &::after {
-//     //   content: ' ';
-//     //   position: absolute;
-//     //   z-index: -1;
-//     //   top: 5px;
-//     //   left: 5px;
-//     //   right: 5px;
-//     //   bottom: 5px;
-//     //   border: 1px solid $c-red;
-//     //   z-index: 1;
-//     // }
+    @media (min-width: 768px) {
+      //   display: grid;
+      grid-template-areas: 'section image';
+      grid-template-columns: repeat(10, 1fr);
+      align-items: center;
+    }
 
-//     @media (min-width: 768px) {
-//       grid-column: 1 / 3;
-//       grid-row: 1;
+    @media (min-width: 1024px) {
+      grid-template-rows: repeat(6, 1fr);
+    }
+  }
 
-//       // margin: 0;
-//     }
-//   }
+  &__section {
+    grid-area: section;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    background-color: var(--event-section-background);
+    padding: var(--event-section-padding);
+    margin: var(--event-section-margin);
+    box-shadow: var(--event-section-shadow);
 
-//   &__header {
-//     font-family: $header-font;
-//     font-size: $h4-fs;
-//     font-weight: $fw-normal;
-//     text-align: center;
-//     margin: 0;
-//     // margin-top: var(--spacing);
-//   }
+    &::before {
+      content: attr(data-before-content);
+      position: absolute;
+      top: -3rem;
+      left: 0;
+      font-family: var(--event-title-font-face);
+      font-size: 6rem;
+      color: var(--event-section-pseudo-color);
+      z-index: 2;
+    }
 
-//   &__body {
-//     font-size: $small-fs;
-//     text-align: center;
-//     margin: 0;
-//     margin-top: calc(var(--spacing) / 2);
+    &:hover {
+      &::before {
+        --event-section-pseudo-color: var(--primary);
+      }
+    }
 
-//     @media (min-width: 768px) {
-//       font-size: $normal-fs;
-//     }
-//   }
+    @media (min-width: 768px) {
+      grid-column: 2 / 6;
+      grid-row: 1;
+    }
+    @media (min-width: 1024px) {
+      grid-column: 3 / 6;
+      grid-row: 2 / 6;
+      margin: 0;
+      align-self: start;
+    }
+  }
 
-//   &__price {
-//     font-family: $header-font;
-//     font-size: $normal-fs;
-//     color: $c-red;
-//     margin: 0;
-//     justify-self: flex-end;
-//     align-self: flex-end;
-//     margin-top: var(--spacing);
-//     // margin: 0 calc(var(--spacing) / 2) calc(var(--spacing) / 2) 0;
+  &__title {
+    font-family: var(--event-title-font-face);
+    font-size: var(--event-title-font-size);
+    font-weight: var(--event-title-font-weight);
+  }
 
-//     @media (min-width: 768px) {
-//       font-size: $large-fs;
-//     }
-//   }
+  &__body {
+    font-family: var(--event-body-font-face);
+    font-size: var(--event-body-font-size);
+    font-weight: var(--event-body-font-weight);
+    margin: var(--event-body-margin);
+  }
 
-//   &__image {
-//     // grid-area: image;
-//     border: 5px solid $c-black;
-//     max-width: 100%;
-//     width: 100%;
-//     // max-height: 160px;
-//     object-fit: cover;
-//     box-shadow: 0px 6px 10px $c-grey;
+  &__price {
+    font-family: var(--event-price-font-face);
+    font-size: var(--event-price-font-size);
+    font-weight: var(--event-price-font-weight);
+    color: var(--event-price-color);
+    align-self: flex-end;
+  }
 
-//     margin-top: var(--spacing);
+  &__image {
+    grid-area: image;
+    max-width: 100%;
+    width: 100%;
+    object-fit: cover;
+    box-shadow: var(--event-image-shadow);
 
-//     @media (min-width: 768px) {
-//       grid-column: 2 / 5;
-//       grid-row: 1;
-//       margin: 0;
-//     }
-//   }
-// }
+    @media (min-width: 768px) {
+      grid-column: 5 / 10;
+      grid-row: 1;
+    }
+
+    @media (min-width: 1024px) {
+      grid-column: 5 / 9;
+      grid-row: 3 / 7;
+      align-self: end;
+    }
+  }
+}
 </style>
