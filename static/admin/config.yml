@@ -67,21 +67,22 @@ collections:
             - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number', valueType: 'float' }
             - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
 
-  - name: 'menu'
-    label: 'Menu restauracji'
-    format: 'json'
-    folder: 'assets/content/menu'
-    create: true
-    slug: '{{slug}}'
-    fields:
-      - { label: 'Tytuł strony', name: 'menu_page_title', widget: 'string' }
-      - { label: 'Podtytuł strony', name: 'menu_page_subtitle', widget: 'string' }
-      - name: 'category'
-        label: 'Potrawa'
-        format: 'json'
-        widget: 'list'
-        fields:
-          - { label: 'Nazwa potrawy', name: 'food_name', widget: 'string' }
-          - { label: 'Opis potrawy', name: 'food_description', widget: 'string' }
-          - { label: 'Ilość/wielkość potrawy', name: 'food_size', widget: 'string' }
-          - { label: 'Cena potrawy', name: 'food_price', widget: 'string' }
+    - name: 'menu'
+      label: 'Menu restauracji'
+      format: 'json'
+      file: 'assets/content/menu/menu.json'
+      slug: '{{slug}}'
+      widget: 'object'
+      create: true
+      collapsed: true
+      fields:
+        - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
+        - name: 'dishes'
+          label: 'Potrawy'
+          format: 'json'
+          widget: 'list'
+          fields:
+            - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
+            - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
+            - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
+            - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
