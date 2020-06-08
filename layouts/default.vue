@@ -41,6 +41,8 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  --header-padding: var(--space-sm);
+
   min-height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
@@ -63,13 +65,19 @@ export default {
 }
 .header {
   grid-area: header;
+  padding-top: var(--header-padding);
+  padding-left: var(--header-padding);
+  padding-right: var(--header-padding);
+
+  @media (min-width: 1024px) {
+    --header-padding: var(--space-md);
+  }
 }
 .main {
   grid-area: main;
 }
 .aside {
   grid-area: aside;
-  // grid-row: header-start;
 }
 .footer {
   grid-area: footer;
