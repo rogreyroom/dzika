@@ -1,0 +1,12 @@
+{
+  "menu_page_title": "Mięsa",
+  "category": [
+    {
+      "food_name": "Gulasz",
+      "food_description": "opis",
+      "food_size": "1sz",
+      "food_price": "50pln"
+    }
+  ],
+  "menu_page_subtitle": "podtytuł"
+}
