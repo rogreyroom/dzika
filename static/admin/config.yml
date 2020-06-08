@@ -85,3 +85,22 @@ collections:
           - { label: 'Opis potrawy', name: 'food_description', widget: 'string' }
           - { label: 'Ilość/wielkość potrawy', name: 'food_size', widget: 'string' }
           - { label: 'Cena potrawy', name: 'food_price', widget: 'string' }
+
+  - name: 'new'
+    label: 'Menu restauracji'
+    format: 'json'
+    folder: 'assets/content/menu'
+    slug: '{{slug}}'
+    widget: 'object'
+    collapsed: true
+    fields:
+      - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
+      - name: 'dishes'
+        label: 'Potrawy'
+        format: 'json'
+        widget: 'list'
+        fields:
+          - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
+          - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
+          - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
+          - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
