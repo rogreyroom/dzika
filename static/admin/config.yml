@@ -73,6 +73,7 @@ collections:
       file: 'assets/content/menu/menu.json'
       slug: '{{slug}}'
       widget: 'object'
+      create: true
       collapsed: true
       fields:
         - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
