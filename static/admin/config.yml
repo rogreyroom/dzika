@@ -75,11 +75,11 @@ collections:
         format: 'json'
         file: 'assets/content/menu/menu.json'
         slug: '{{slug}}'
-        field:
+        fields:
           - name: 'categories-list'
             format: 'json'
             widget: 'list'
-            field:
+            fields:
               - name: 'categories'
                 label: 'Kategorie'
                 format: 'json'
