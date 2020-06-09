@@ -78,6 +78,7 @@ collections:
         editor:
           preview: false
         widget: list
+        create: true
         fields:
         - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
         - name: 'dishes'
