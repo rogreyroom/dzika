@@ -67,7 +67,7 @@ collections:
             - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number', valueType: 'float' }
             - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
 
-  - name: 'menu'
+    - name: 'menu'
     label: 'Menu restauracji'
     files:
       - name: 'foods'
@@ -75,24 +75,23 @@ collections:
         format: 'json'
         file: 'assets/content/menu/menu.json'
         slug: '{{slug}}'
-        widget: list
-        allow_add: true
-        create: true
-        fields:
-          - name: 'categories'
-            label: 'Kategorie'
+        field:
+          - name: 'categories-list'
             format: 'json'
-            widget: 'object'
-            create: true
-            fields:
-              - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
-              - name: 'dishes'
-                label: 'Dania'
+            widget: 'list'
+            field:
+              - name: 'categories'
+                label: 'Kategorie'
                 format: 'json'
-                widget: 'list'
-                create: true
+                widget: 'object'
                 fields:
-                  - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
-                  - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
-                  - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
-                  - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
+                  - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
+                  - name: 'dishes'
+                    label: 'Dania'
+                    format: 'json'
+                    widget: 'list'
+                    fields:
+                      - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
+                      - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
+                      - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
+                      - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
