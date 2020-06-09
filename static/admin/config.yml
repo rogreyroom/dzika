@@ -67,15 +67,18 @@ collections:
             - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number', valueType: 'float' }
             - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
 
-    - name: 'menu'
-      label: 'Menu restauracji'
-      format: 'json'
-      file: 'assets/content/menu/menu.json'
-      slug: '{{slug}}'
-      widget: 'object'
-      create: true
-      collapsed: true
-      fields:
+  - name: 'menu'
+    label: 'Menu restauracji'
+    files:
+      - name: 'foods'
+        label: 'Potrawy'
+        format: 'json'
+        file: 'assets/content/menu/menu.json'
+        slug: '{{slug}}'
+        editor:
+          preview: false
+        widget: list
+        fields:
         - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
         - name: 'dishes'
           label: 'Potrawy'
