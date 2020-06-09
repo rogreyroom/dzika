@@ -1,3 +1,32 @@
 {
-
+  "categories": [
+    {
+      "category": "Pizza",
+      "dishes": [
+        {
+          "dish_name": "Margarita",
+          "dish_description": "sos, ser",
+          "dish_size": "mała",
+          "dish_price": "12pln"
+        },
+        {
+          "dish_name": "Serowa",
+          "dish_description": "sery",
+          "dish_size": "mała",
+          "dish_price": "30pln"
+        }
+      ]
+    },
+    {
+      "category": "Makaron",
+      "dishes": [
+        {
+          "dish_name": "Carbonara",
+          "dish_description": "makaron, boczek",
+          "dish_size": "talerz",
+          "dish_price": "25pln"
+        }
+      ]
+    }
+  ]
 }
