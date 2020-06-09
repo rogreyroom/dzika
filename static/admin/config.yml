@@ -76,6 +76,7 @@ collections:
         file: 'assets/content/menu/menu.json'
         slug: '{{slug}}'
         widget: list
+        allow_add: true
         fields:
           - name: 'categories'
             label: 'Kategorie'
