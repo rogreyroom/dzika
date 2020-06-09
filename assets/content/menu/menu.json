@@ -1,11 +1,2 @@
 {
-  "category": "Pizza",
-  "dishes": [
-    {
-      "dish_name": "Margarita",
-      "dish_description": "sos, ser",
-      "dish_size": "mała",
-      "dish_price": "15pln"
-    }
-  ]
 }
