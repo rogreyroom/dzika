@@ -1,2 +1,19 @@
 {
+  "categories": {
+    "category": "Pizza",
+    "dishes": [
+      {
+        "dish_name": "Margarita",
+        "dish_description": "sos, ser",
+        "dish_size": "mala",
+        "dish_price": "12pln"
+      },
+      {
+        "dish_name": "Serowa",
+        "dish_description": "sery",
+        "dish_size": "big",
+        "dish_price": "20pln"
+      }
+    ]
+  }
 }
