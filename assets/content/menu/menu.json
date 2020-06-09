@@ -1,3 +1,36 @@
 {
-
+  "categories-list": [
+    {
+      "categories": {
+        "category": "Pizza",
+        "dishes": [
+          {
+            "dish_name": "Margarita",
+            "dish_description": "sos, ser",
+            "dish_size": "mała",
+            "dish_price": "12pln"
+          },
+          {
+            "dish_name": "Serowa",
+            "dish_description": "ser",
+            "dish_size": "mała",
+            "dish_price": "15pln"
+          }
+        ]
+      }
+    },
+    {
+      "categories": {
+        "category": "Makarony",
+        "dishes": [
+          {
+            "dish_name": "Carbonara",
+            "dish_description": "makaron, sos, mieso",
+            "dish_size": "tależ",
+            "dish_price": "30pln"
+          }
+        ]
+      }
+    }
+  ]
 }
