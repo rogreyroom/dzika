@@ -75,18 +75,21 @@ collections:
         format: 'json'
         file: 'assets/content/menu/menu.json'
         slug: '{{slug}}'
-        editor:
-          preview: false
         widget: list
-        create: true
         fields:
-        - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
-        - name: 'dishes'
-          label: 'Potrawy'
-          format: 'json'
-          widget: 'list'
-          fields:
-            - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
-            - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
-            - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
-            - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
+          - name: 'categories'
+            label: 'Kategorie'
+            format: 'json'
+            widget: 'object'
+            create: true
+            fields:
+              - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
+              - name: 'dishes'
+                label: 'Dania'
+                format: 'json'
+                widget: 'list'
+                fields:
+                  - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
+                  - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
+                  - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
+                  - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
