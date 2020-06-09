@@ -76,22 +76,18 @@ collections:
         file: 'assets/content/menu/menu.json'
         slug: '{{slug}}'
         fields:
-          - name: 'categories-list'
+          - name: 'categories'
+            label: 'Kategorie'
             format: 'json'
             widget: 'list'
             fields:
-              - name: 'categories'
-                label: 'Kategorie'
+              - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
+              - name: 'dishes'
+                label: 'Dania'
                 format: 'json'
-                widget: 'object'
+                widget: 'list'
                 fields:
-                  - { label: 'Kategoria potraw', name: 'category', widget: 'string'}
-                  - name: 'dishes'
-                    label: 'Dania'
-                    format: 'json'
-                    widget: 'list'
-                    fields:
-                      - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
-                      - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
-                      - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
-                      - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
+                  - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
+                  - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
+                  - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
+                  - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
