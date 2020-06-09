@@ -77,6 +77,7 @@ collections:
         slug: '{{slug}}'
         widget: list
         allow_add: true
+        create: true
         fields:
           - name: 'categories'
             label: 'Kategorie'
@@ -89,6 +90,7 @@ collections:
                 label: 'Dania'
                 format: 'json'
                 widget: 'list'
+                create: true
                 fields:
                   - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
                   - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
