@@ -67,7 +67,7 @@ collections:
             - { label: 'Cena zestawu', name: 'event_menu_price', widget: 'number', valueType: 'float' }
             - { label: 'Zdjęcie', name: 'event_menu_photo', widget: 'image' }
 
-    - name: 'menu'
+  - name: 'menu'
     label: 'Menu restauracji'
     files:
       - name: 'foods'
