@@ -1,1 +1,615 @@
-{}
+{
+	"categories": [
+		{
+			"category": "Przystawki",
+			"dishes": [
+				{
+					"dish_name": "Grzanki z masełkiem czosnkowym",
+					"dish_description": "znakomity dodatek do piwa",
+					"dish_price": "8,99pln"
+				},
+				{
+					"dish_name": "Krewetki Black Tiger",
+					"dish_description": " w masełku czosnkowym",
+					"dish_price": "24,99pln"
+				},
+				{
+					"dish_name": "Brokuły zapiekane",
+					"dish_description": " z serem w sosie beszamelowym",
+					"dish_price": "12,99pln"
+				},
+				{
+					"dish_name": "Cabernet w żurawinie",
+					"dish_description": "smażony ser cabernet podawany z żurawiną",
+					"dish_price": "15,99pln"
+				},
+				{
+					"dish_name": "Grzyby leśne",
+					"dish_description": "duszone w śmietanie, podawane z grzanką",
+					"dish_price": "14,99pln"
+				},
+				{
+					"dish_name": "Pizza Brot",
+					"dish_description": "polecamy również jako smaczny i chrupiący dodatek do win lub sałatek",
+					"dish_price": "7,99pln"
+				}
+			]
+		},
+		{
+			"category": "Zupy",
+			"dishes": [
+				{
+					"dish_name": "Zupa Dnia - zapytaj obsługę o dzisiejszą zupę dnia",
+					"dish_price": "8,99pln"
+				},
+				{
+					"dish_name": "Rosół z makaronem",
+					"dish_price": "8,99pln"
+				},
+				{
+					"dish_name": "Pomidorowa z makaronem lub ryżem",
+					"dish_price": "9,99pln"
+				},
+				{
+					"dish_name": "Barszcz czerwony",
+					"dish_price": "7,99pln"
+				},
+				{
+					"dish_name": "Barszcz z krokietem - pyszny barszcz z mięsnym krokietem",
+					"dish_price": "12,99pln"
+				},
+				{
+					"dish_name": "Czosnkowa z grzankami",
+					"dish_price": "11,99pln"
+				},
+				{
+					"dish_name": "Meksykańska",
+					"dish_price": "14,99pln"
+				},
+				{
+					"dish_name": "Krem z brokułów z grzanką z serem",
+					"dish_price": "11,99pln"
+				}
+			]
+		},
+		{
+			"category": "Zestawy",
+			"dishes": [
+				{
+					"dish_name": "Polędwica wieprzowa",
+					"dish_price": "32,99pln",
+					"dish_description": "polędwiczki wieprzowe z grilla, ćwiartki pieczarek z grilla podawane z talarkami i ogórkiem konserwowym"
+				},
+				{
+					"dish_name": "Rolada WOŁOWA",
+					"dish_price": "30,99pln",
+					"dish_description": "kluski śląskie, kapusta czerwona"
+				},
+				{
+					"dish_name": "Placek po węgiersku",
+					"dish_price": "28,99pln",
+					"dish_description": "z gulaszem wołowym, podawany z mizerią i papryczką chilli"
+				},
+				{
+					"dish_name": "Schab po wiedeńsku",
+					"dish_price": "26,99pln",
+					"dish_description": "podawany z pieczonymi ziemniakami i surówką z kapusty pekińskiej"
+				},
+				{
+					"dish_name": "Schab panierowany",
+					"dish_price": "20,99pln",
+					"dish_description": "podawany z ziemniakami z wody i zestawem surówek "
+				},
+				{
+					"dish_name": "Grillowane piersi z kurczaka",
+					"dish_price": "24,99pln",
+					"dish_description": "podawane z ryżem i buraczkami"
+				},
+				{
+					"dish_name": "Panierowana Pierś z kurczaka",
+					"dish_price": "21,99pln",
+					"dish_description": "frytki, zestaw surówek"
+				},
+				{
+					"dish_name": "Wątróbki drobiowe",
+					"dish_price": "17,99pln",
+					"dish_description": "z cebulką, ziemniaki z wody, surówka z kapusty kiszonej"
+				},
+				{
+					"dish_name": "Ser panierowany",
+					"dish_price": "22,99pln",
+					"dish_description": "podawany z frytkami i sosem tatarskim"
+				},
+				{
+					"dish_name": "Naleśniki a'la Dzika Róża - zapiekane z serem",
+					"dish_price": "18,99pln",
+					"dish_description": "z pieczarkami, papryką, kukurydzą, kurczakiem i brokułami"
+				},
+				{
+					"dish_name": "Pierogi ruskie",
+					"dish_price": "14,99pln",
+					"dish_description": "8 szt - podawane z cebulką - polecamy z kefirem"
+				}
+			]
+		},
+		{
+			"category": "Zestawy Dla Dzieci",
+			"dishes": [
+				{
+					"dish_name": "Delikatne paluszki z kurczaka",
+					"dish_price": "12,99pln",
+					"dish_description": "Podawane z talarkami i surówką z marchewki zakrapianą sokiem z pomarańczy"
+				},
+				{
+					"dish_name": "Serek panierowany",
+					"dish_price": "14,99pln",
+					"dish_description": "Podawany z frytkami i surówką z kapusty pekińskiej"
+				},
+				{
+					"dish_name": "Pizzunia",
+					"dish_price": "10,99pln",
+					"dish_description": "Ser mozzarella, szynka, kukurydza"
+				}
+			]
+		},
+		{
+			"category": "Desery",
+			"dishes": [
+				{
+					"dish_name": "Suflet",
+					"dish_price": "15,99pln",
+					"dish_description": "niezwykle pyszny, francuski, mocno czekoladowy deser na ciepło"
+				},
+				{
+					"dish_name": "Panna Cotta",
+					"dish_price": "13,99pln",
+					"dish_description": "delikatny włoski deser śmietankowy z polewą malina/czekolada lub karmel"
+				},
+				{
+					"dish_name": "Szarlotka na gorąco",
+					"dish_price": "11,99pln",
+					"dish_description": "podawana z gałką lodów i bitą śmietaną"
+				},
+				{
+					"dish_name": "Puchar lodów waniliowych",
+					"dish_price": "12,99pln",
+					"dish_description": "z bitą śmietaną i polewą"
+				},
+				{
+					"dish_name": "Kawa mrożona",
+					"dish_price": "10,99pln"
+				},
+				{
+					"dish_name": "Koktajl truskawkowy",
+					"dish_price": "11,99pln"
+				},
+				{
+					"dish_name": "Koktajl malinowy",
+					"dish_price": "11,99pln"
+				},
+				{
+					"dish_name": "Koktajl jagodowy",
+					"dish_price": "11,99pln"
+				}
+			]
+		},
+		{
+			"category": "Ryby",
+			"dishes": [
+				{
+					"dish_name": "Łosoś norweski",
+					"dish_price": "16,99pln",
+					"dish_size": "wg/wg 100g",
+					"dish_description": "z pieca - polecamy ze szpinakiem na ciepło i puree ziemniaczanym"
+				},
+				{
+					"dish_name": "Sandacz",
+					"dish_price": "12,99pln",
+					"dish_size": "wg/wg 100g",
+					"dish_description": "filet z pieca"
+				},
+				{
+					"dish_name": "Pstrąg",
+					"dish_price": "10,99pln",
+					"dish_size": "wg/wg 100g",
+					"dish_description": "pieczony w maśle ziołowym"
+				}
+			]
+		},
+		{
+			"category": "Pierogi",
+			"dishes": [
+				{
+					"dish_name": "Pierogi ruskie - polecamy z kefirem",
+					"dish_price": "14,99pln",
+					"dish_size": "8szt."
+				},
+				{
+					"dish_name": "Pierogi z mięsem",
+					"dish_price": "16,99pln",
+					"dish_size": "8szt."
+				}
+			]
+		},
+		{
+			"category": "Sałatki",
+			"dishes": [
+				{
+					"dish_name": "Sałatka Dzika Róża",
+					"dish_price": "20,99pln",
+					"dish_description": "Sałata lodowa, ogórek zielony, marchewka, grzanki, szynka gotowana, filet z kurczaka, sos jogurtowy "
+				},
+				{
+					"dish_name": "Sałatka Cezar",
+					"dish_price": "20,99pln",
+					"dish_description": "bukiet sałat, pomidor, grillowany kurczak, parmezan, sos cezar"
+				},
+				{
+					"dish_name": "Sałatka Grecka",
+					"dish_price": "20,99pln",
+					"dish_description": "Sałata lodowa, ogórek zielony, oliwki, papryka świeża, ser feta, pomidor, cebula, sos winegret "
+				},
+				{
+					"dish_name": "Sałatka a’la Chef",
+					"dish_price": "24,99pln",
+					"dish_description": "Sałata lodowa, pomidory, ogórek, fasola czerwona, mięso z kurczaka, jajko, ananas, sos jogurtowy "
+				}
+			]
+		},
+		{
+			"category": "Kuchnia Niemiecka",
+			"dishes": [
+				{
+					"dish_name": "Flammkuchen Dzika Róża",
+					"dish_price": "24,99pln",
+					"dish_description": "Sos czosnkowy, salami, boczek, ser żółty, cebula "
+				},
+				{
+					"dish_name": "Flammkuchen Klassik",
+					"dish_price": "23,99pln",
+					"dish_description": "Śmietana, cebula, boczek"
+				},
+				{
+					"dish_name": "Flammkuchen Mexikana - (na ostro ! ! !)",
+					"dish_price": "27,99pln",
+					"dish_description": "Sos meksykański, kukurydza, salami, papryka chili, cebula, ser żółty "
+				},
+				{
+					"dish_name": "Flammkuchen Krabben",
+					"dish_price": "28,99pln",
+					"dish_description": "Sos czosnkowy, cebula, krewetki, łosoś, ser żółty "
+				},
+				{
+					"dish_name": "Flammkuchen Kubana",
+					"dish_price": "25,99pln",
+					"dish_description": "Sos chili, cebula, kurczak, szynka, papryka, ser mozzarella "
+				},
+				{
+					"dish_name": "Flammkuchen Rustikal",
+					"dish_price": "24,99pln",
+					"dish_description": "Sos czosnkowy, cebula, boczek, ogórek kiszony, ser mozzarella "
+				}
+			]
+		},
+		{
+			"category": "Spaghetti",
+			"dishes": [
+				{
+					"dish_name": "Spaghetti alla Chitarra & Salsa alla Bolognese",
+					"dish_price": "18,99pln",
+					"dish_description": "gęsty, mięsny sos wieprzowo-wołowy z aromatycznym akcentem przypraw"
+				}
+			]
+		},
+		{
+			"category": "Tagliatelle",
+			"dishes": [
+				{
+					"dish_name": "Tagliatelle & Salsa Bianca",
+					"dish_price": "32,99pln",
+					"dish_description": "biały sos na bazie śmietany z owocami morza i dodatkiem czosnku"
+				}
+			]
+		},
+		{
+			"category": "Pappardelle",
+			"dishes": [
+				{
+					"dish_name": "Pappardelle & Salsa Rossa",
+					"dish_price": "24,99pln",
+					"dish_description": "czerwony sos pomidorowo-paprykowy z dodatkiem cebuli i grillowanego kurczaka"
+				}
+			]
+		},
+		{
+			"category": "Tortellini",
+			"dishes": [
+				{
+					"dish_name": "Tortellini & Salsa Verde",
+					"dish_price": "29,99pln",
+					"dish_description": "zielony sos śmietanowo-szpinakowy z dodatkiem boczku, cebuli i czosnku"
+				}
+			]
+		},
+		{
+			"category": "Garganelli",
+			"dishes": [
+				{
+					"dish_name": "Garganelli & Salsa Marrone",
+					"dish_price": "27,99pln",
+					"dish_description": "brązowy sos śmietanowo-grzybowy z dodatkiem cebuli i grillowanego kurczaka"
+				}
+			]
+		},
+		{
+			"category": "Spaghetti",
+			"dishes": [
+				{
+					"dish_name": "Spaghetti alla Chitarra & Salsa alla Carbonara",
+					"dish_price": "24,99pln",
+					"dish_description": "kremowy sos śmietanowo-serowo-jajeczny na wysmażonym boczku"
+				}
+			]
+		},
+		{
+			"category": "Pizza",
+			"dishes": [
+				{
+					"dish_name": "Pizza Margherita",
+					"dish_price": "16,99pln  / 21,99pln",
+					"dish_description": "Sos pomidorowy, ser mozzarella "
+				},
+				{
+					"dish_name": "Pizza Salami",
+					"dish_price": "20,99pln / 27,99pln",
+					"dish_description": "salami"
+				},
+				{
+					"dish_name": "Pizza Capricciosa",
+					"dish_price": "20,99pln / 27,99pln",
+					"dish_description": "szynka, pieczarki"
+				},
+				{
+					"dish_name": "Pizza Vegetariana",
+					"dish_price": "21,99pln/ 27,99pln",
+					"dish_description": "Cebula, pomidory, kukurydza, oliwki, pieczarki, brokuły "
+				},
+				{
+					"dish_name": "Pizza Funghi Mix",
+					"dish_price": "21,99pln / 29,99pln",
+					"dish_description": "Salami, szynka, pieczarki"
+				},
+				{
+					"dish_name": "Pizza Gyros",
+					"dish_price": "21,99pln / 29,99pln",
+					"dish_description": "kukurydza, ogórek konserwowy, cebula, gyros wieprzowy"
+				},
+				{
+					"dish_name": "Pizza Mexicana - OSTRE!",
+					"dish_price": "22,99pln / 30,99pln",
+					"dish_description": "Salami, peperoni, fasola, kukurydza, cebula, sos czosnkowy "
+				},
+				{
+					"dish_name": "Pizza Romantica",
+					"dish_price": "22,99pln / 30,99pln",
+					"dish_description": "Salami, szynka, pieczarki, papryka"
+				},
+				{
+					"dish_name": "Pizza FatMat",
+					"dish_price": "23,99pln / 30,99pln",
+					"dish_description": "szynka, pieczarki, pomidor, brokuły"
+				},
+				{
+					"dish_name": "Pizza Sahne",
+					"dish_price": "23,99pln / 31,99pln",
+					"dish_description": "Szynka, salami, szpinak, parmezan"
+				},
+				{
+					"dish_name": "Pizza Calzone - pizza w kształcie pieroga",
+					"dish_price": "24,99pln / 32,99pln",
+					"dish_description": "Salami, szynka, kukurydza, pieczarki, czosnek "
+				},
+				{
+					"dish_name": "Pizza Calzone a'la Chef - pizza w kształcie pieroga",
+					"dish_price": "25,99pln / 34,99pln",
+					"dish_description": "Salami, szynka, kukurydza, czosnek, czosnek, smażone pieczarki, kurczak "
+				},
+				{
+					"dish_name": "Pizza Americana",
+					"dish_price": "25,99pln / 35,99pln",
+					"dish_description": "Salami, pieczarki, kukurydza, cebula, papryka, mięso z kurczaka "
+				},
+				{
+					"dish_name": "Pizza Villaggo",
+					"dish_price": "25,99pln / 35,99pln",
+					"dish_description": "szynka, pieczarki, cebula, czosnek, boczek, jajko, ogórek kiszony"
+				},
+				{
+					"dish_name": "Pizza Formaggio",
+					"dish_price": "28,99pln / 38,99pln",
+					"dish_description": "Ser pleśniowy, ser feta, ser wędzony, żurawina"
+				}
+			]
+		},
+		{
+			"category": "Dodatek",
+			"dishes": [
+				{
+					"dish_name": "Dodatek do pizzy - ser zawijany w brzegach",
+					"dish_price": "10,99pln / 12,99pln"
+				}
+			]
+		},
+		{
+			"category": "Sosy",
+			"dishes": [
+				{
+					"dish_name": "Sos czosnkowy",
+					"dish_price": "2,99pln"
+				},
+				{
+					"dish_name": "Sos jogurtowy",
+					"dish_price": "3,99pln"
+				},
+				{
+					"dish_name": "Sos meksykański",
+					"dish_price": "2,99pln"
+				},
+				{
+					"dish_name": "Sos tzaziki",
+					"dish_price": "3,99pln"
+				},
+				{
+					"dish_name": "Sos tatarski",
+					"dish_price": "3,99pln"
+				},
+				{
+					"dish_name": "Sos cezar",
+					"dish_price": "2,99pln"
+				},
+				{
+					"dish_name": "Sos pieczeniowy - 100 ml",
+					"dish_price": "2,99pln"
+				}
+			]
+		},
+		{
+			"category": "Dodatki",
+			"dishes": [
+				{
+					"dish_name": "Frytki (podawane z naszą specjalną przyprawą)",
+					"dish_price": "6,99pln"
+				},
+				{
+					"dish_name": "Dufinki",
+					"dish_price": "8,99pln"
+				},
+				{
+					"dish_name": "Kluski śląskie",
+					"dish_price": "5,99pln"
+				},
+				{
+					"dish_name": "Talarki ziemniaczane",
+					"dish_price": "6,99pln"
+				},
+				{
+					"dish_name": "Ziemniaki pieczone lub po amerykańsku",
+					"dish_price": "5,99pln"
+				},
+				{
+					"dish_name": "Ziemniaki z wody",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Ryż biały",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Bukiet warzyw z grilla",
+					"dish_price": "11,99pln"
+				},
+				{
+					"dish_name": "Bukiet warzyw z wody",
+					"dish_price": "10,99pln"
+				},
+				{
+					"dish_name": "Pieczarki z grilla",
+					"dish_price": "8,99pln"
+				},
+				{
+					"dish_name": "Pieczarki panierowane",
+					"dish_price": "9,99pln"
+				},
+				{
+					"dish_name": "Pieczywo",
+					"dish_price": "2,99pln"
+				},
+				{
+					"dish_name": "Masło czosnkowe",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Ketchup",
+					"dish_price": "1,99pln"
+				},
+				{
+					"dish_name": "Majonez",
+					"dish_price": "3,99pln"
+				},
+				{
+					"dish_name": "Kefir",
+					"dish_price": "2,99pln"
+				},
+				{
+					"dish_name": "Ser zawijany w brzegach pizzy",
+					"dish_price": "10,99pln"
+				},
+				{
+					"dish_name": "Dodatek warzywny / owocowy",
+					"dish_price": "3,99pln"
+				},
+				{
+					"dish_name": "Dodatek mięsny",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Dodatek serowy",
+					"dish_price": "6,99pln"
+				},
+				{
+					"dish_name": "Dodatek owoce morza",
+					"dish_price": "7,99pln"
+				}
+			]
+		},
+		{
+			"category": "Surówki",
+			"dishes": [
+				{
+					"dish_name": "Zestaw surówek",
+					"dish_price": "6,99pln"
+				},
+				{
+					"dish_name": "Kapusta czerwona",
+					"dish_price": "5,99pln"
+				},
+				{
+					"dish_name": "Kapusta biała",
+					"dish_price": "5,99pln"
+				},
+				{
+					"dish_name": "Buraczki czerwone",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Mizeria",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Surówka z pekińskiej",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Marchew z pomarańczą",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Surówka z kiszonej kapusty",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Ogórek konserwowy",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Ogórek kiszony",
+					"dish_price": "4,99pln"
+				},
+				{
+					"dish_name": "Szpinak na ciepło z masłem i czosnkiem",
+					"dish_price": "8,99pln"
+				}
+			]
+		}
+	]
+}
