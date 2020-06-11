@@ -1,48 +1,34 @@
 <template>
   <ul class="menu">
-    <!-- <div
-      v-for="(item, index) in navigation"
-      :key="index"
-
-      :class="checkRoute(item.url)"
-    > -->
     <li
       v-for="(item, index) in navigation"
       :key="index"
       class="menu__item"
     >
-      <!-- <nav-link
-        :title="item.title"
-        :url="item.url"
-        class="menu__link"
-      /> -->
+      <nuxt-link
+        :to="item.url"
+        class="menu__button"
+        exact
+        exact-active-class="menu_button--active"
+      >
+        {{ item.title }}
+      </nuxt-link>
     </li>
-    <!-- </div> -->
   </ul>
 </template>
 
 <script>
 import { mapState } from 'vuex'
-// import NavLink from '~/components/Home/Navigation/NavLink.vue'
 
 export default {
-  components: {
-    // NavLink
-  },
   data () {
     return {
-      nav: []
     }
   },
   computed: {
     ...mapState(['navigation'])
   },
   created () {
-    // eslint-disable-next-line no-console
-    // console.log(this.$route.fullPath)
-    // this.$route.fullPath === '/menu'
-    //   ? this.nav = this.navigation.filter(({ url }) => url === '/events')
-    //   : this.nav = this.navigation.filter(({ url }) => url === '/menu')
   },
   methods: {
     checkRoute (item) {
@@ -53,67 +39,83 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// .menu {
-//   margin: 0;
-//   padding: 0;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   // background: aquamarine;
-//   height: 70px;
-//   width: 100%;
-//   overflow: hidden;
-//   // padding: calc(var(--spacing) * 2) 0;
+.menu {
+  --navigation-button-font-face: var(--ff-secondary);
+  --navigation-button-font-size: var(--body-normal);
+  --navigation-button-font-weight: var(--fw-semibold);
+  --navigation-button-color: var(--black);
+  --navigation-button-outline-size: 0 0 0 4px;
+  --navigation-button-outline-color: var(--secondary);
 
-//   display: none;
-// }
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: none;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  width: 100%;
+  background-image: linear-gradient(
+    270deg,
+    #f9f9fb 41.94%,
+    rgba(251, 251, 251, 0.6) 100%
+  );
+  position: relative;
+  z-index: 1;
 
-// .menu__item {
-//   display: block;
-//   height: 32px;
-//   width: 65%;
+  @media (min-width: 736px) {
+    display: flex;
+  }
 
-//   // width: 100%;
-//   // line-height: 32px;
-//   // background: var(--c-red);
-//   // margin-bottom: 4px;
-//   // border: 1px solid $c-red;
-//   // transition: 0.5s ease;
-// }
+  &__item {
+    display: block;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(240, 240, 243, 0.6);
+  }
 
-// .menu__item:hover {
-//   background: none;
-//   animation: pulse 1s;
-//   box-shadow: 0 0 0 1.5rem rgba(252, 255, 255, 0.1);
-// }
+  &__button {
+    font-family: var(--navigation-button-font-face);
+    font-size: var(--navigation-button-font-size);
+    font-weight: var(--navigation-button-font-weight);
+    color: var(--navigation-button-color);
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem 1.8rem;
+    width: 275px;
+    position: relative;
+    transition: all 0.4s ease-out;
 
-// .menu__item:hover .menu__link {
-//   color: $c-red;
-//   font-weight: $fw-semibold;
-// }
+    &::before {
+      content: '';
+      background: none;
+      width: 100%;
+      height: 3px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transition: all 0.4s ease-out;
+    }
 
-// @keyframes pulse {
-//   0% {
-//     box-shadow: 0 0 0 0 $c-red;
-//   }
-// }
+    &:hover {
+      --navigation-button-color: var(--primary);
 
-// .hide-me {
-//   display: none;
-//   background: orchid;
-// }
+      &::before {
+        background: var(--primary);
+        box-shadow: 0 -2px 10px;
+      }
+    }
 
-// .menu__link {
-//   justify-content: center;
-//   border: 1px solid $c-red;
-//   border-radius: 16px;
-//   // height: 32px;
-//   //   font-weight: $fw-normal;
-//   //   line-height: 32px;
-//   //   padding-left: 20px;
-//   //   color: $c-white;
-//   // box-shadow: 4px 4px 10px 1.5rem rgba(47, 31, 232, 0.9);
-//   box-shadow: 0 0 1rem rgba(208, 42, 39, 0.65);
-// }
+    &:focus {
+      outline: var(--navigation-button-outline-color);
+      // box-shadow: var(--navigation-button-outline-size)
+      //   var(--navigation-button-outline-color);
+    }
+
+    &:active,
+    &--active {
+      --navigation-button-color: var(--primary);
+      box-shadow: inset -21px 21px 42px #e3e3e373, inset 21px -21px 42px #fff;
+    }
+  }
+}
 </style>
