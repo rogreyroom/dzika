@@ -222,7 +222,8 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  display: inline-flex;
+  // display: inline-flex;
+  white-space: nowrap;
 
   @media (min-width: 736px) {
     display: none;
