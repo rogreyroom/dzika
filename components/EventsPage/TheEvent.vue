@@ -14,11 +14,13 @@
         {{ price }}pln
       </p>
     </section>
-    <img
-      class="event__image"
-      :src="photo"
-      :alt="`Zdjęcie przedstawiające zestaw ${name}`"
-    >
+    <picture class="event__image-wrap">
+      <img
+        class="event__image"
+        :src="photo"
+        :alt="`Zdjęcie przedstawiające zestaw ${name}`"
+      >
+    </picture>
   </div>
 </template>
 
@@ -68,16 +70,20 @@ export default {
     --event-set-margin: var(--space-lg);
 
     --event-section-pseudo-color: var(--dark-grey);
-    --event-section-background: var(--pale-grey);
+    --event-section-background: var(--snow);
     --event-section-padding: var(--space-lg) var(--space-normal) var(--space-sm)
       var(--space-normal);
     --event-section-margin: var(--space-lg) 0;
-    --event-section-shadow: var(--shadow-light-bottom);
+    // --event-section-shadow: var(--shadow-light-bottom);
+
+    --event-section-shadow: 20px 20px 60px #d4d4d5, -20px -20px 60px #ffffff;
 
     --event-body-margin: var(--space-normal) 0;
     --event-image-border: 5px solid var(--black);
 
-    --event-image-shadow: 0px 6px 10px var(--dark-grey);
+    // --event-image-shadow: 0px 6px 10px var(--dark-grey);
+
+    --event-image-shadow: -20px -20px 60px #d4d4d5, 20px 20px 60px #ffffff;
 
     display: grid;
     grid-template-areas: 'section' 'image';
@@ -85,7 +91,6 @@ export default {
     margin-bottom: var(--event-set-margin);
 
     @media (min-width: 768px) {
-      //   display: grid;
       grid-template-areas: 'section image';
       grid-template-columns: repeat(10, 1fr);
       align-items: center;
@@ -107,21 +112,31 @@ export default {
     padding: var(--event-section-padding);
     margin: var(--event-section-margin);
     box-shadow: var(--event-section-shadow);
+    transition: box-shadow 0.3s ease-in-out;
+    z-index: 2;
 
     &::before {
       content: attr(data-before-content);
       position: absolute;
       top: -3rem;
-      left: 0;
+      left: 3px;
       font-family: var(--event-title-font-face);
       font-size: 6rem;
       color: var(--event-section-pseudo-color);
       z-index: 2;
+      transition: color 0.4s ease-in-out;
     }
 
     &:hover {
+      --event-section-shadow: -20px -20px 60px #d4d4d5, 20px 20px 60px #ffffff;
+
       &::before {
         --event-section-pseudo-color: var(--primary);
+      }
+
+      + .event__image-wrap {
+        --event-image-shadow: 20px 20px 60px #d4d4d5, -20px -20px 60px #ffffff;
+        box-shadow: var(--event-image-shadow);
       }
     }
 
@@ -130,7 +145,6 @@ export default {
       grid-row: 1;
     }
     @media (min-width: 1024px) {
-      grid-column: 3 / 6;
       grid-row: 2 / 6;
       margin: 0;
       align-self: start;
@@ -148,6 +162,7 @@ export default {
     font-size: var(--event-body-font-size);
     font-weight: var(--event-body-font-weight);
     margin: var(--event-body-margin);
+    text-align: center;
   }
 
   &__price {
@@ -158,12 +173,29 @@ export default {
     align-self: flex-end;
   }
 
-  &__image {
+  &__image-wrap {
     grid-area: image;
-    max-width: 100%;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
     box-shadow: var(--event-image-shadow);
+    transition: box-shadow 0.3s ease-in-out, transform 0.7s ease-out;
+    position: relative;
+    z-index: 1;
+
+    &::after {
+      z-index: -1;
+      position: absolute;
+      content: '';
+      bottom: 15px;
+      right: 10px;
+      left: auto;
+      width: 50%;
+      top: 80%;
+      max-width: 300px;
+      background: #777;
+      box-shadow: 0 15px 10px #777;
+      transform: rotate(3deg);
+    }
 
     @media (min-width: 768px) {
       grid-column: 5 / 10;
@@ -171,10 +203,17 @@ export default {
     }
 
     @media (min-width: 1024px) {
-      grid-column: 5 / 9;
       grid-row: 3 / 7;
       align-self: end;
     }
+  }
+
+  &__image {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
   }
 }
 </style>
