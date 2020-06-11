@@ -2,6 +2,7 @@
   <div class="logo">
     <nuxt-link
       to="/"
+      exact
       class="logo__link"
     >
       <svg
@@ -55,6 +56,10 @@
     font-weight: var(--logo-font-weight);
     letter-spacing: var(--logo-font-letter-spacing);
     color: var(--logo-font-color);
+  }
+
+  .nuxt-link-active {
+    box-shadow: none;
   }
 }
 </style>
