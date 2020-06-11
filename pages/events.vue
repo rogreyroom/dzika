@@ -222,5 +222,10 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  display: inline-flex;
+
+  @media (min-width: 736px) {
+    display: none;
+  }
 }
 </style>

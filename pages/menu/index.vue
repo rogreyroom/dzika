@@ -261,6 +261,11 @@ export default {
   bottom: var(--space-lg);
   left: 50%;
   transform: translateX(-50%);
+  display: inline-flex;
+
+  @media (min-width: 736px) {
+    display: none;
+  }
 }
 
 @keyframes heart {
