@@ -54,8 +54,11 @@ export default {
 
 <style lang="scss" scoped>
 .social {
-  // grid-column: 2 / 3;
-  // grid-row: 2 / 3;
+  --social-icon-background: var(--dark-grey);
+  --social-hover-link-background: var(--primary);
+  --social-link-margin: var(--space-normal);
+  --social-link-margin-small: var(--space-sm);
+
   display: flex;
   flex-direction: column;
   justify-self: end;
@@ -67,28 +70,23 @@ export default {
   }
 
   &__link {
-    // reset
     text-decoration: none;
     background-color: transparent;
     font-family: inherit;
     padding: 0;
     cursor: pointer;
-
     display: block;
-    // width: 24px;
-    // height: 24px;
-    margin-bottom: 10px;
-    margin-right: var(--spacing);
-
+    margin-bottom: var(--social-link-margin-small);
+    margin-right: var(--social-link-margin);
     transition: 220ms all ease-in-out;
 
     &:hover > .social__icon path {
-      fill: $c-icon-hover-bg;
+      fill: var(--social-hover-link-background);
     }
 
     @media (min-width: 1024px) {
-      margin-right: 10px;
-      margin-left: 10px;
+      margin-right: var(--social-link-margin-small);
+      margin-left: var(--social-link-margin);
     }
   }
 
@@ -97,7 +95,7 @@ export default {
     height: 24px;
 
     path {
-      fill: $c-grey;
+      fill: var(--social-icon-background);
     }
   }
 }

@@ -2,6 +2,7 @@
   <div class="logo">
     <nuxt-link
       to="/"
+      exact
       class="logo__link"
     >
       <svg
@@ -26,8 +27,13 @@
 
 <style lang="scss" scoped>
 .logo {
+  --logo-font-face: var(--ff-secondary);
+  --logo-font-size: var(--body-normal);
+  --logo-font-weight: var(--fw-normal);
+  --logo-font-letter-spacing: 0.04em;
+  --logo-font-color: var(--primary);
+
   width: max-content;
-  margin-top: var(--spacing);
   margin-left: var(--spacing);
 
   &__link {
@@ -45,11 +51,15 @@
   }
 
   &__text {
-    font-family: $body-font;
-    font-size: $large-fs;
-    font-weight: $fw-semibold;
-    letter-spacing: 0.05em;
-    color: $c-red;
+    font-family: var(--logo-font-face);
+    font-size: var(--logo-font-size);
+    font-weight: var(--logo-font-weight);
+    letter-spacing: var(--logo-font-letter-spacing);
+    color: var(--logo-font-color);
+  }
+
+  .nuxt-link-active {
+    box-shadow: none;
   }
 }
 </style>

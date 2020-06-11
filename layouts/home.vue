@@ -2,7 +2,6 @@
   <div class="container">
     <header class="header">
       <base-logo class="header__logo" />
-      <base-navigation />
     </header>
 
     <nuxt class="main" />
@@ -14,21 +13,13 @@
 
 <script>
 import BaseLogo from '~/components/Base/BaseLogo.vue'
-import BaseNavigation from '~/components/Base/BaseNavigation.vue'
 import TheAside from '~/components/Layout/TheAside.vue'
 import TheFooter from '~/components/Layout/TheFooter.vue'
 export default {
   components: {
     BaseLogo,
-    BaseNavigation,
     TheAside,
     TheFooter
-  },
-  computed: {
-  },
-  created () {
-  },
-  methods: {
   }
 }
 </script>
@@ -41,13 +32,11 @@ export default {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr;
   grid-template-rows: max-content minmax(min-content, 1fr) auto auto;
   grid-template-areas:
-    'header'
-    'main'
-    'aside'
-    'footer';
+    'header header'
+    'main aside'
+    'footer footer';
 
   @media (min-width: 1024px) {
     grid-template-areas:
@@ -62,16 +51,14 @@ export default {
   padding-top: var(--header-padding);
   padding-left: var(--header-padding);
   padding-right: var(--header-padding);
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  z-index: 10;
 
   @media (min-width: 1024px) {
     --header-padding: var(--space-md);
   }
 
   &__logo {
-    flex-shrink: 0;
+    padding: 0.6rem 0;
   }
 }
 .main {

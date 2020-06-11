@@ -23,17 +23,25 @@ export default {}
 
 <style lang="scss" scoped>
 .footer {
-  // bottom: 0;
-  // grid-area: footer;
+  --footer-font-face: var(--secondary);
+  --footer-font-size: var(--body-info-small);
+  --footer-font-weight: var(--fw-normal);
+  --footer-text-color: var(--dark-grey);
+  --footer-hover-text-color: var(--secondary-dark);
+  --footer-link-outline-color: var(--secondary);
+  --footer-link-outline-size: 0 0 0 4px;
+  --footer-margin: 0 10px 5px 10px;
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 0 10px 5px 10px;
 
   &__text {
-    font-family: $body-font;
-    font-size: $small-fs;
-    color: $c-grey;
+    font-family: var(--footer-font-face);
+    font-size: var(--footer-font-size);
+    font-weight: var(--footer-font-weight);
+    color: var(--footer-text-color);
     margin: 0;
   }
 
@@ -42,15 +50,21 @@ export default {}
     border: none;
     background-color: transparent;
     font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
     padding: 0;
     cursor: pointer;
-
-    color: $c-grey;
     transition: 220ms all ease-in-out;
 
-    &:hover,
+    &:hover {
+      --footer-text-color: var(--footer-hover-text-color);
+    }
+
     &:focus {
-      color: $c-black;
+      outline: var(--footer-link-outline-color);
+      box-shadow: var(--footer-link-outline-size)
+        var(--footer-link-outline-color);
     }
   }
 }
