@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">
-      <base-logo />
+      <base-logo class="header__logo" />
       <base-navigation />
     </header>
 
@@ -13,7 +13,6 @@
 </template>
 
 <script>
-// import { mapState, mapMutations } from 'vuex'
 import BaseLogo from '~/components/Base/BaseLogo.vue'
 import BaseNavigation from '~/components/Base/BaseNavigation.vue'
 import TheAside from '~/components/Layout/TheAside.vue'
@@ -26,15 +25,10 @@ export default {
     TheFooter
   },
   computed: {
-    // ...mapState(['isHome'])
   },
   created () {
-    // this.$nuxt.$route.path === '/'
-    //   ? this.SET_IS_HOME(true)
-    //   : this.SET_IS_HOME(false)
   },
   methods: {
-    // ...mapMutations(['SET_IS_HOME'])
   }
 }
 </script>
@@ -68,9 +62,16 @@ export default {
   padding-top: var(--header-padding);
   padding-left: var(--header-padding);
   padding-right: var(--header-padding);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 
   @media (min-width: 1024px) {
     --header-padding: var(--space-md);
+  }
+
+  &__logo {
+    flex-shrink: 0;
   }
 }
 .main {
