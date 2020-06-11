@@ -67,3 +67,8 @@ p,
 a {
 	margin: 0;
 }
+
+.nuxt-link-active {
+	--navigation-button-color: var(--primary);
+	box-shadow: inset -21px 21px 42px #e3e3e373, inset 21px -21px 42px #fff;
+}
