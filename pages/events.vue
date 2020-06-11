@@ -14,7 +14,7 @@
         </p>
       </header>
       <div class="events__hero">
-        <picture class="events__imagewwwwww">
+        <picture>
           <source
             srcset="/img/restaurant.png"
             media="(max-width: 767px)"
@@ -34,7 +34,6 @@
           >
         </picture>
       </div>
-
       <section class="event">
         <div
           v-for="({event_menu_name, event_menu_description, event_menu_price, event_menu_photo}, index) in event_menu"
@@ -93,7 +92,7 @@ export default {
 
 <style lang="scss" scoped>
 .events {
-  --events-title-font-face: var(--ff-secondary);
+  --events-title-font-face: var(--ff-primary);
   --events-title-font-size: var(--title-small);
   --events-title-font-weight: var(--fw-normal);
   --events-body-font-face: var(--ff-secondary);
@@ -104,27 +103,44 @@ export default {
   --events-phone-font-weight: var(--fw-normal);
   --events-phone-underline-color: var(--primary);
   --events-margin: var(--space-normal);
-  --events-big-margin: var(--space-lg);
-  --events-padding: var(--space-normal);
+  --events-padding: var(--space-sm) var(--space-normal);
+  --events-header-height: 300px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: var(--events-padding);
 
+  @media (min-width: 768px) {
+    --events-padding: var(--space-sm) var(--space-md);
+  }
+
   @media (min-width: 1024px) {
-    --events-padding: var(--space-lg);
+    --events-title-font-size: var(--title-normal);
+    --events-subtitle-font-size: var(--body-normal);
+    --events-padding: var(--space-md) var(--space-lg);
+  }
+
+  @media (min-width: 1600px) {
+    --events-title-font-size: var(--title-large);
+    --events-subtitle-font-size: var(--body-large);
   }
 
   &__header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: var(--events-big-margin);
+    justify-content: center;
+    height: var(--events-header-height);
 
     @media (min-width: 768px) {
+      --events-header-height: 250px;
       width: 50%;
       align-self: flex-start;
+    }
+
+    @media (min-width: 1600px) {
+      --events-header-height: 350px;
     }
   }
 
@@ -162,28 +178,6 @@ export default {
   }
 
   &__hero {
-    //     display: none;
-    //     // align-content: center;
-    //     position: absolute;
-    //     right: 0;
-    //     top: 0;
-    //     // max-width: 100%;
-    //     width: 350px;
-    //     height: 250px;
-
-    //     // overflow: hidden;
-    //     // border-radius: 0 0 0 100px;
-
-    //     // z-index: -1;
-
-    //     @media (min-width: 768px) {
-    //       display: block;
-    //     }
-
-    //     @media (min-width: 1024px) {
-    //       width: 450px;
-    //       height: 300px;
-    //     }
     @media (min-width: 768px) {
       position: absolute;
       right: 0;
@@ -212,7 +206,6 @@ export default {
     filter: drop-shadow(var(--shadow-light-glow));
 
     @media (min-width: 768px) {
-      // filter: none;
       margin: 0;
       width: 100%;
       border-radius: 0 0 0 200px;
@@ -228,5 +221,6 @@ export default {
   bottom: var(--space-lg);
   left: 50%;
   transform: translateX(-50%);
+  z-index: 10;
 }
 </style>
