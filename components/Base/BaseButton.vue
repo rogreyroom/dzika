@@ -90,6 +90,7 @@ export default {
   text-align: center;
   line-height: 1.1;
   transition: var(--button-transition);
+  flex-shrink: 0;
 
   &:hover {
     --button-background: var(--button-hover-background);
