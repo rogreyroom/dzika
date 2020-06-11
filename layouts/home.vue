@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">
-      <base-logo />
+      <base-logo class="header__logo" />
     </header>
 
     <nuxt class="main" />
@@ -26,11 +26,12 @@ export default {
 
 <style lang="scss" scoped>
 .container {
+  --header-padding: var(--space-sm);
+
   min-height: 100vh;
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr var(--home-hero-image-size);
   grid-template-rows: max-content minmax(min-content, 1fr) auto auto;
   grid-template-areas:
     'header header'
@@ -47,10 +48,18 @@ export default {
 }
 .header {
   grid-area: header;
-  padding-top: var(--space-sm);
-  padding-left: var(--space-sm);
-  padding-right: var(--space-sm);
+  padding-top: var(--header-padding);
+  padding-left: var(--header-padding);
+  padding-right: var(--header-padding);
   z-index: 10;
+
+  @media (min-width: 1024px) {
+    --header-padding: var(--space-md);
+  }
+
+  &__logo {
+    padding: 0.6rem 0;
+  }
 }
 .main {
   grid-area: main;
