@@ -5,9 +5,15 @@
 	"event_menu": [
 		{
 			"event_menu_name": "Obiad domowy",
+			"event_menu_description": "Krewetki Black Tiger (w masełku czosnkowym), Rosół z makaronem,  Polędwica wieprzowa (polędwiczki wieprzowe z grilla, ćwiartki pieczarek z grilla podawane z talarkami i ogórkiem konserwowym) ",
+			"event_menu_price": 45,
+			"event_menu_photo": "/img/dinner.png"
+		},
+		{
+			"event_menu_name": "Obiad domowy",
 			"event_menu_description": "Pieczeń, czerwona kapusta i kluski.",
 			"event_menu_price": 45,
-			"event_menu_photo": "/img/pizza.png"
+			"event_menu_photo": "/img/dinner.png"
 		}
 	]
 }
