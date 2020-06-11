@@ -61,19 +61,14 @@ export const actions = {
   },
 
   async FETCH_FOOD_MENU ({ commit }) {
-    const files = await require.context('~/assets/content/menu/', false, /\.json$/)
-    const foods = files.keys().map((key) => {
-      const res = files(key)
-      res.slug = key.slice(2, -5)
-      return res
-    })
-    await commit('SET_FOOD_MENU', foods)
+    const menu = await require('~/assets/content/menu/menu.json')
+    await commit('SET_FOOD_MENU', menu)
   },
 
   async nuxtServerInit ({ dispatch }) {
     await dispatch('FETCH_SOCIAL')
     await dispatch('FETCH_HOME')
     await dispatch('FETCH_EVENTS')
-    // await dispatch('FETCH_FOOD_MENU')
+    await dispatch('FETCH_FOOD_MENU')
   }
 }
