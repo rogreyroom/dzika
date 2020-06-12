@@ -3,8 +3,18 @@
     <section class="home">
       <picture class="home__hero">
         <source
+          type="image/webp"
+          srcset="pizza.webp"
+          media="(min-width: 1024px)"
+        >
+        <source
           srcset="/img/pizza.png"
           media="(min-width: 1024px)"
+        >
+        <source
+          type="image/webp"
+          srcset="pizza-medium.webp"
+          media="(min-width: 736px)"
         >
         <source
           srcset="/img/pizza-medium.png"
