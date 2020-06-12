@@ -26,7 +26,7 @@ export default {}
   --footer-font-face: var(--secondary);
   --footer-font-size: var(--body-info-small);
   --footer-font-weight: var(--fw-normal);
-  --footer-text-color: var(--dark-grey);
+  --footer-text-color: var(--dark-extra-grey);
   --footer-hover-text-color: var(--secondary-dark);
   --footer-link-outline-color: var(--secondary);
   --footer-link-outline-size: 0 0 0 4px;
