@@ -23,7 +23,7 @@ export default {}
 
 <style lang="scss" scoped>
 .footer {
-  --footer-font-face: var(--secondary);
+  --footer-font-face: var(--ff-secondary);
   --footer-font-size: var(--body-info-small);
   --footer-font-weight: var(--fw-normal);
   --footer-text-color: var(--dark-extra-grey);
@@ -52,7 +52,7 @@ export default {}
     font-family: inherit;
     font-size: inherit;
     font-weight: inherit;
-    color: inherit;
+    color: var(--footer-text-color);
     padding: 0;
     cursor: pointer;
     transition: 220ms all ease-in-out;
