@@ -35,6 +35,7 @@
 
   width: max-content;
   margin-left: var(--spacing);
+  user-select: none;
 
   &__link {
     text-decoration: none;
