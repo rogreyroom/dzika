@@ -97,16 +97,16 @@ export default {
   /*
    ** CMS router
    */
-  generate: {
-    routes () {
-      const fs = require('fs')
-      const path = require('path')
-      return fs.readdirSync('./assets/content/pages').map((file) => {
-        return {
-          route: `/pages/${path.parse(file).name}`, // Return the slug
-          payload: require(`./assets/content/pages/${file}`)
-        }
-      })
-    }
-  }
+  // generate: {
+  //   routes () {
+  //     const fs = require('fs')
+  //     const path = require('path')
+  //     return fs.readdirSync('./assets/content/pages').map((file) => {
+  //       return {
+  //         route: `/pages/${path.parse(file).name}`, // Return the slug
+  //         payload: require(`./assets/content/pages/${file}`)
+  //       }
+  //     })
+  //   }
+  // }
 }
