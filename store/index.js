@@ -11,7 +11,7 @@ export const state = () => ({
     },
     {
       title: 'Imprezy okolicznościowe',
-      url: '/events'
+      url: '/celebrations'
     }
   ]
 })
