@@ -48,6 +48,7 @@ export default {
     'main'
     'aside'
     'footer';
+  position: relative;
 
   @media (min-width: 1024px) {
     grid-template-areas:
