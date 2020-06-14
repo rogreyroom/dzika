@@ -1,7 +1,15 @@
 <template>
   <main class="main">
     <section class="home">
-      <picture class="home__hero">
+      <div class="home__hero">
+        <img
+          src="/img/pizza.png"
+          srcset="/img/pizza.png 1x, /img/pizza@2x.png 2x"
+          width="300"
+          height="300"
+          class="home__image"
+        >
+        <!-- <picture class="home__hero">
         <source
           type="image/webp"
           srcset="pizza.webp"
@@ -25,7 +33,8 @@
           alt="Bardzo smaczna Pizza z Restauracji Dzika róża"
           class="home__hero"
         >
-      </picture>
+      </picture> -->
+      </div>
       <header class="home__header">
         <the-slogan
           :home-title="home_page_title"
@@ -127,13 +136,13 @@ export default {
 
   &__hero {
     grid-area: hero;
-    min-height: 250px;
-    object-fit: none;
-    object-position: left center;
-    filter: drop-shadow(var(--shadow-light-glow-large));
+    height: 250px;
+    // object-fit: none;
+    // object-position: left center;
+    // filter: drop-shadow(var(--shadow-light-glow-large));
 
     @media (min-height: 736px) {
-      min-height: 320px;
+      height: 320px;
     }
 
     @media (min-height: 768px) {
@@ -142,7 +151,22 @@ export default {
 
     @media (min-width: 1024px) {
       padding-top: var(--space-md);
+      align-self: center;
+      display: flex;
+      justify-content: center;
     }
+  }
+
+  &__image {
+    max-width: 100%;
+    min-height: auto;
+    // display: block;
+    // margin: 0 auto;
+    object-fit: none;
+    object-position: left center;
+    filter: drop-shadow(-10px 15px 20px rgba(170, 170, 172, 0.5));
+    align-self: center;
+    justify-self: center;
   }
 
   &__header {
@@ -164,6 +188,16 @@ export default {
     flex-direction: column;
     align-content: center;
     padding-left: var(--home-spacing);
+
+    @media (min-width: 1024px) {
+      justify-self: center;
+      padding-left: 0;
+    }
+
+    @media (min-height: 1024px) {
+      align-self: start;
+      margin-top: 170px;
+    }
   }
 
   &__text {

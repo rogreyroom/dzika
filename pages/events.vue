@@ -14,7 +14,14 @@
         </p>
       </header>
       <div class="events__hero">
-        <picture>
+        <img
+          src="/img/restaurant.jpg"
+          srcset="/img/restaurant.jpg 1x, /img/restaurant@2x.jpg 2x"
+          width="300"
+          height="450"
+          class="events__image"
+        >
+        <!-- <picture>
           <source
             srcset="/img/restaurant.png"
             media="(max-width: 767px)"
@@ -32,7 +39,7 @@
             alt="Sala moninkoa w Restauracji Dzika Róża"
             class="events__image"
           >
-        </picture>
+        </picture> -->
       </div>
       <section class="event">
         <div
@@ -139,9 +146,9 @@ export default {
       align-self: flex-start;
     }
 
-    @media (min-width: 1600px) {
-      --events-header-height: 350px;
-    }
+    // @media (min-width: 1600px) {
+    //   --events-header-height: 350px;
+    // }
   }
 
   &__title {
@@ -182,33 +189,34 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
-      width: 350px;
+      width: 300px;
       height: 300px;
     }
 
-    @media (min-width: 1024px) {
-      width: 500px;
-    }
+    // @media (min-width: 1024px) {
+    //   width: 500px;
+    //   height: 500px;
+    // }
 
-    @media (min-width: 1600px) {
-      width: 700px;
-      height: 400px;
-    }
+    // @media (min-width: 1600px) {
+    //   width: 700px;
+    //   height: 400px;
+    // }
   }
 
   &__image {
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: block;
     margin: 0 auto;
     object-fit: cover;
     object-position: center;
-    filter: drop-shadow(var(--shadow-light-glow));
+    filter: drop-shadow(-10px 15px 20px rgba(170, 170, 172, 0.5));
 
     @media (min-width: 768px) {
       margin: 0;
-      width: 100%;
-      border-radius: 0 0 0 200px;
+      // width: 100%;
+      border-radius: 50% 0 50% 50%;
     }
   }
 }

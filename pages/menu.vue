@@ -11,7 +11,14 @@
       </header>
 
       <div class="menu__hero">
-        <picture>
+        <img
+          src="/img/garden.jpg"
+          srcset="/img/garden.jpg 1x, /img/garden@2x.jpg 2x"
+          width="300"
+          height="450"
+          class="menu__image"
+        >
+        <!-- <picture>
           <source
             srcset="/img/garden.png"
             media="(max-width: 767px)"
@@ -29,7 +36,7 @@
             alt="Sala moninkoa w Restauracji Dzika Róża"
             class="menu__image"
           >
-        </picture>
+        </picture> -->
       </div>
 
       <section class="menu__body">
@@ -118,6 +125,7 @@ export default {
   --menu-header-height: 200px;
 
   padding: var(--menu-body-padding);
+  user-select: none;
 
   @media (min-width: 768px) {
     --menu-body-padding: var(--space-sm) var(--space-md);
@@ -149,7 +157,7 @@ export default {
     @media (min-width: 1600px) {
       --menu-title-font-size: var(--title-large);
       --menu-subtitle-font-size: var(--body-large);
-      --menu-header-height: 350px;
+      // --menu-header-height: 350px;
     }
   }
 
@@ -180,33 +188,33 @@ export default {
       position: absolute;
       right: 0;
       top: 0;
-      width: 350px;
+      width: 300px;
       height: 300px;
     }
 
-    @media (min-width: 1024px) {
-      width: 500px;
-    }
+    // @media (min-width: 1024px) {
+    //   width: 500px;
+    // }
 
-    @media (min-width: 1600px) {
-      height: 400px;
-      width: 700px;
-    }
+    // @media (min-width: 1600px) {
+    //   height: 400px;
+    //   width: 700px;
+    // }
   }
 
   &__image {
-    width: 90%;
+    width: 100%;
     height: 100%;
     display: block;
     margin: 0 auto;
     object-fit: cover;
     object-position: center;
-    filter: drop-shadow(var(--shadow-light-glow));
+    filter: drop-shadow(-10px 15px 20px rgba(170, 170, 172, 0.5));
 
     @media (min-width: 768px) {
       margin: 0;
-      width: 100%;
-      border-radius: 0 0 0 200px;
+      // width: 100%;
+      border-radius: 50% 0 50% 50%;
     }
   }
 
