@@ -81,7 +81,7 @@ export default {
     text-decoration: none;
     display: block;
     padding: 0.8rem 1.8rem;
-    width: 275px;
+    // width: 275px;
     position: relative;
     transition: all 0.4s ease-out;
 
