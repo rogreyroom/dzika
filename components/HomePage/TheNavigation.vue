@@ -57,9 +57,20 @@ export default {
       box-shadow: var(--list-item-hover-shadow);
     }
 
+    .button {
+      padding: 0.5rem var(--space-normal);
+    }
+
     @media (min-width: 768px) {
       .button {
         padding-left: var(--space-lg);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .button {
+        // padding-left: var(--space-lg);
+        padding: 0.7rem var(--space-lg);
       }
     }
   }
