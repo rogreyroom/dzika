@@ -91,3 +91,6 @@ sw.*
 
 # Vim swap files
 *.swp
+
+# Temp files
+/static/img/org
