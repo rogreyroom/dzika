@@ -14,13 +14,15 @@
         {{ price }}pln
       </p>
     </section>
-    <picture class="event__image-wrap">
+    <div class="event__image-wrap">
       <img
         class="event__image"
         :src="photo"
         :alt="`Zdjęcie przedstawiające zestaw ${name}`"
+        width="420"
+        height="260"
       >
-    </picture>
+    </div>
   </div>
 </template>
 
