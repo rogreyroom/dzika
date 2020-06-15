@@ -1,6 +1,163 @@
 {
   "categories": [
     {
+      "category": "Pizza",
+      "dishes": [
+        {
+          "dish_name": "Pizza Margherita",
+          "dish_price": "16,99pln  / 21,99pln",
+          "dish_description": "Sos pomidorowy, ser mozzarella "
+        },
+        {
+          "dish_name": "Pizza Salami",
+          "dish_price": "20,99pln / 27,99pln",
+          "dish_description": "salami"
+        },
+        {
+          "dish_name": "Pizza Capricciosa",
+          "dish_price": "20,99pln / 27,99pln",
+          "dish_description": "szynka, pieczarki"
+        },
+        {
+          "dish_name": "Pizza Vegetariana",
+          "dish_price": "21,99pln/ 27,99pln",
+          "dish_description": "Cebula, pomidory, kukurydza, oliwki, pieczarki, brokuły "
+        },
+        {
+          "dish_name": "Pizza Funghi Mix",
+          "dish_price": "21,99pln / 29,99pln",
+          "dish_description": "Salami, szynka, pieczarki"
+        },
+        {
+          "dish_name": "Pizza Gyros",
+          "dish_price": "21,99pln / 29,99pln",
+          "dish_description": "kukurydza, ogórek konserwowy, cebula, gyros wieprzowy"
+        },
+        {
+          "dish_name": "Pizza Mexicana - OSTRE!",
+          "dish_price": "22,99pln / 30,99pln",
+          "dish_description": "Salami, peperoni, fasola, kukurydza, cebula, sos czosnkowy "
+        },
+        {
+          "dish_name": "Pizza Romantica",
+          "dish_price": "22,99pln / 30,99pln",
+          "dish_description": "Salami, szynka, pieczarki, papryka"
+        },
+        {
+          "dish_name": "Pizza FatMat",
+          "dish_price": "23,99pln / 30,99pln",
+          "dish_description": "szynka, pieczarki, pomidor, brokuły"
+        },
+        {
+          "dish_name": "Pizza Sahne",
+          "dish_price": "23,99pln / 31,99pln",
+          "dish_description": "Szynka, salami, szpinak, parmezan"
+        },
+        {
+          "dish_name": "Pizza Calzone - pizza w kształcie pieroga",
+          "dish_price": "24,99pln / 32,99pln",
+          "dish_description": "Salami, szynka, kukurydza, pieczarki, czosnek "
+        },
+        {
+          "dish_name": "Pizza Calzone a'la Chef - pizza w kształcie pieroga",
+          "dish_price": "25,99pln / 34,99pln",
+          "dish_description": "Salami, szynka, kukurydza, czosnek, czosnek, smażone pieczarki, kurczak "
+        },
+        {
+          "dish_name": "Pizza Americana",
+          "dish_price": "25,99pln / 35,99pln",
+          "dish_description": "Salami, pieczarki, kukurydza, cebula, papryka, mięso z kurczaka "
+        },
+        {
+          "dish_name": "Pizza Villaggo",
+          "dish_price": "25,99pln / 35,99pln",
+          "dish_description": "szynka, pieczarki, cebula, czosnek, boczek, jajko, ogórek kiszony"
+        },
+        {
+          "dish_name": "Pizza Formaggio",
+          "dish_price": "28,99pln / 38,99pln",
+          "dish_description": "Ser pleśniowy, ser feta, ser wędzony, żurawina"
+        }
+      ]
+    },
+    {
+      "category": "Dodatek",
+      "dishes": [
+        {
+          "dish_name": "Dodatek do pizzy - ser zawijany w brzegach",
+          "dish_price": "10,99pln / 12,99pln"
+        }
+      ]
+    },
+    {
+      "category": "Sosy",
+      "dishes": [
+        {
+          "dish_name": "Sos czosnkowy",
+          "dish_price": "2,99pln"
+        },
+        {
+          "dish_name": "Sos jogurtowy",
+          "dish_price": "3,99pln"
+        },
+        {
+          "dish_name": "Sos meksykański",
+          "dish_price": "2,99pln"
+        },
+        {
+          "dish_name": "Sos tzaziki",
+          "dish_price": "3,99pln"
+        },
+        {
+          "dish_name": "Sos tatarski",
+          "dish_price": "3,99pln"
+        },
+        {
+          "dish_name": "Sos cezar",
+          "dish_price": "2,99pln"
+        },
+        {
+          "dish_name": "Sos pieczeniowy - 100 ml",
+          "dish_price": "2,99pln"
+        }
+      ]
+    },
+    {
+      "category": "Kuchnia Niemiecka",
+      "dishes": [
+        {
+          "dish_name": "Flammkuchen Dzika Róża",
+          "dish_price": "24,99pln",
+          "dish_description": "Sos czosnkowy, salami, boczek, ser żółty, cebula "
+        },
+        {
+          "dish_name": "Flammkuchen Klassik",
+          "dish_price": "23,99pln",
+          "dish_description": "Śmietana, cebula, boczek"
+        },
+        {
+          "dish_name": "Flammkuchen Mexikana - (na ostro ! ! !)",
+          "dish_price": "27,99pln",
+          "dish_description": "Sos meksykański, kukurydza, salami, papryka chili, cebula, ser żółty "
+        },
+        {
+          "dish_name": "Flammkuchen Krabben",
+          "dish_price": "28,99pln",
+          "dish_description": "Sos czosnkowy, cebula, krewetki, łosoś, ser żółty "
+        },
+        {
+          "dish_name": "Flammkuchen Kubana",
+          "dish_price": "25,99pln",
+          "dish_description": "Sos chili, cebula, kurczak, szynka, papryka, ser mozzarella "
+        },
+        {
+          "dish_name": "Flammkuchen Rustikal",
+          "dish_price": "24,99pln",
+          "dish_description": "Sos czosnkowy, cebula, boczek, ogórek kiszony, ser mozzarella "
+        }
+      ]
+    },
+    {
       "category": "Przystawki",
       "dishes": [
         {
@@ -217,81 +374,6 @@
       ]
     },
     {
-      "category": "Pierogi",
-      "dishes": [
-        {
-          "dish_name": "Pierogi ruskie - polecamy z kefirem",
-          "dish_price": "14,99pln",
-          "dish_size": "8szt."
-        },
-        {
-          "dish_name": "Pierogi z mięsem",
-          "dish_price": "16,99pln",
-          "dish_size": "8szt."
-        }
-      ]
-    },
-    {
-      "category": "Sałatki",
-      "dishes": [
-        {
-          "dish_name": "Sałatka Dzika Róża",
-          "dish_price": "20,99pln",
-          "dish_description": "Sałata lodowa, ogórek zielony, marchewka, grzanki, szynka gotowana, filet z kurczaka, sos jogurtowy "
-        },
-        {
-          "dish_name": "Sałatka Cezar",
-          "dish_price": "20,99pln",
-          "dish_description": "bukiet sałat, pomidor, grillowany kurczak, parmezan, sos cezar"
-        },
-        {
-          "dish_name": "Sałatka Grecka",
-          "dish_price": "20,99pln",
-          "dish_description": "Sałata lodowa, ogórek zielony, oliwki, papryka świeża, ser feta, pomidor, cebula, sos winegret "
-        },
-        {
-          "dish_name": "Sałatka a’la Chef",
-          "dish_price": "24,99pln",
-          "dish_description": "Sałata lodowa, pomidory, ogórek, fasola czerwona, mięso z kurczaka, jajko, ananas, sos jogurtowy "
-        }
-      ]
-    },
-    {
-      "category": "Kuchnia Niemiecka",
-      "dishes": [
-        {
-          "dish_name": "Flammkuchen Dzika Róża",
-          "dish_price": "24,99pln",
-          "dish_description": "Sos czosnkowy, salami, boczek, ser żółty, cebula "
-        },
-        {
-          "dish_name": "Flammkuchen Klassik",
-          "dish_price": "23,99pln",
-          "dish_description": "Śmietana, cebula, boczek"
-        },
-        {
-          "dish_name": "Flammkuchen Mexikana - (na ostro ! ! !)",
-          "dish_price": "27,99pln",
-          "dish_description": "Sos meksykański, kukurydza, salami, papryka chili, cebula, ser żółty "
-        },
-        {
-          "dish_name": "Flammkuchen Krabben",
-          "dish_price": "28,99pln",
-          "dish_description": "Sos czosnkowy, cebula, krewetki, łosoś, ser żółty "
-        },
-        {
-          "dish_name": "Flammkuchen Kubana",
-          "dish_price": "25,99pln",
-          "dish_description": "Sos chili, cebula, kurczak, szynka, papryka, ser mozzarella "
-        },
-        {
-          "dish_name": "Flammkuchen Rustikal",
-          "dish_price": "24,99pln",
-          "dish_description": "Sos czosnkowy, cebula, boczek, ogórek kiszony, ser mozzarella "
-        }
-      ]
-    },
-    {
       "category": "Spaghetti",
       "dishes": [
         {
@@ -352,124 +434,42 @@
       ]
     },
     {
-      "category": "Pizza",
+      "category": "Pierogi",
       "dishes": [
         {
-          "dish_name": "Pizza Margherita",
-          "dish_price": "16,99pln  / 21,99pln",
-          "dish_description": "Sos pomidorowy, ser mozzarella "
+          "dish_name": "Pierogi ruskie - polecamy z kefirem",
+          "dish_price": "14,99pln",
+          "dish_size": "8szt."
         },
         {
-          "dish_name": "Pizza Salami",
-          "dish_price": "20,99pln / 27,99pln",
-          "dish_description": "salami"
-        },
-        {
-          "dish_name": "Pizza Capricciosa",
-          "dish_price": "20,99pln / 27,99pln",
-          "dish_description": "szynka, pieczarki"
-        },
-        {
-          "dish_name": "Pizza Vegetariana",
-          "dish_price": "21,99pln/ 27,99pln",
-          "dish_description": "Cebula, pomidory, kukurydza, oliwki, pieczarki, brokuły "
-        },
-        {
-          "dish_name": "Pizza Funghi Mix",
-          "dish_price": "21,99pln / 29,99pln",
-          "dish_description": "Salami, szynka, pieczarki"
-        },
-        {
-          "dish_name": "Pizza Gyros",
-          "dish_price": "21,99pln / 29,99pln",
-          "dish_description": "kukurydza, ogórek konserwowy, cebula, gyros wieprzowy"
-        },
-        {
-          "dish_name": "Pizza Mexicana - OSTRE!",
-          "dish_price": "22,99pln / 30,99pln",
-          "dish_description": "Salami, peperoni, fasola, kukurydza, cebula, sos czosnkowy "
-        },
-        {
-          "dish_name": "Pizza Romantica",
-          "dish_price": "22,99pln / 30,99pln",
-          "dish_description": "Salami, szynka, pieczarki, papryka"
-        },
-        {
-          "dish_name": "Pizza FatMat",
-          "dish_price": "23,99pln / 30,99pln",
-          "dish_description": "szynka, pieczarki, pomidor, brokuły"
-        },
-        {
-          "dish_name": "Pizza Sahne",
-          "dish_price": "23,99pln / 31,99pln",
-          "dish_description": "Szynka, salami, szpinak, parmezan"
-        },
-        {
-          "dish_name": "Pizza Calzone - pizza w kształcie pieroga",
-          "dish_price": "24,99pln / 32,99pln",
-          "dish_description": "Salami, szynka, kukurydza, pieczarki, czosnek "
-        },
-        {
-          "dish_name": "Pizza Calzone a'la Chef - pizza w kształcie pieroga",
-          "dish_price": "25,99pln / 34,99pln",
-          "dish_description": "Salami, szynka, kukurydza, czosnek, czosnek, smażone pieczarki, kurczak "
-        },
-        {
-          "dish_name": "Pizza Americana",
-          "dish_price": "25,99pln / 35,99pln",
-          "dish_description": "Salami, pieczarki, kukurydza, cebula, papryka, mięso z kurczaka "
-        },
-        {
-          "dish_name": "Pizza Villaggo",
-          "dish_price": "25,99pln / 35,99pln",
-          "dish_description": "szynka, pieczarki, cebula, czosnek, boczek, jajko, ogórek kiszony"
-        },
-        {
-          "dish_name": "Pizza Formaggio",
-          "dish_price": "28,99pln / 38,99pln",
-          "dish_description": "Ser pleśniowy, ser feta, ser wędzony, żurawina"
+          "dish_name": "Pierogi z mięsem",
+          "dish_price": "16,99pln",
+          "dish_size": "8szt."
         }
       ]
     },
     {
-      "category": "Dodatek",
+      "category": "Sałatki",
       "dishes": [
         {
-          "dish_name": "Dodatek do pizzy - ser zawijany w brzegach",
-          "dish_price": "10,99pln / 12,99pln"
-        }
-      ]
-    },
-    {
-      "category": "Sosy",
-      "dishes": [
-        {
-          "dish_name": "Sos czosnkowy",
-          "dish_price": "2,99pln"
+          "dish_name": "Sałatka Dzika Róża",
+          "dish_price": "20,99pln",
+          "dish_description": "Sałata lodowa, ogórek zielony, marchewka, grzanki, szynka gotowana, filet z kurczaka, sos jogurtowy "
         },
         {
-          "dish_name": "Sos jogurtowy",
-          "dish_price": "3,99pln"
+          "dish_name": "Sałatka Cezar",
+          "dish_price": "20,99pln",
+          "dish_description": "bukiet sałat, pomidor, grillowany kurczak, parmezan, sos cezar"
         },
         {
-          "dish_name": "Sos meksykański",
-          "dish_price": "2,99pln"
+          "dish_name": "Sałatka Grecka",
+          "dish_price": "20,99pln",
+          "dish_description": "Sałata lodowa, ogórek zielony, oliwki, papryka świeża, ser feta, pomidor, cebula, sos winegret "
         },
         {
-          "dish_name": "Sos tzaziki",
-          "dish_price": "3,99pln"
-        },
-        {
-          "dish_name": "Sos tatarski",
-          "dish_price": "3,99pln"
-        },
-        {
-          "dish_name": "Sos cezar",
-          "dish_price": "2,99pln"
-        },
-        {
-          "dish_name": "Sos pieczeniowy - 100 ml",
-          "dish_price": "2,99pln"
+          "dish_name": "Sałatka a’la Chef",
+          "dish_price": "24,99pln",
+          "dish_description": "Sałata lodowa, pomidory, ogórek, fasola czerwona, mięso z kurczaka, jajko, ananas, sos jogurtowy "
         }
       ]
     }
