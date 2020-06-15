@@ -44,6 +44,13 @@
         />
       </header>
       <the-navigation class="home__navigation" />
+      <img
+        src="/img/tomato.png"
+        srcset="/img/tomato.png 1x, /img/tomato@2x.png 2x"
+        width="300"
+        height="300"
+        class="home__tomato"
+      >
       <section class="home__body">
         <h4 class="home__text">
           {{ company_opening_hours_header }}
@@ -122,11 +129,12 @@ export default {
 
   @media (min-width: 1024px) {
     --home-hero-image-size: 400px;
-    grid-template-rows: var(--logo-height) max-content 1fr;
+    grid-template-rows: var(--logo-height) max-content auto 1fr;
     grid-template-areas:
       '. hero'
       'header hero'
-      'menu body';
+      'menu body'
+      'tomato body';
   }
 
   @media (min-width: 1024px) {
@@ -179,6 +187,25 @@ export default {
 
   &__navigation {
     grid-area: menu;
+  }
+
+  &__tomato {
+    display: none;
+
+    @media (min-width: 1024px) {
+      grid-area: tomato;
+      display: block;
+      width: 100%;
+      max-width: 100%;
+      min-height: auto;
+      // display: block;
+      // margin: 0 auto;
+      object-fit: none;
+      object-position: center center;
+      filter: drop-shadow(-10px 15px 20px rgba(170, 170, 172, 0.5));
+      align-self: center;
+      justify-self: center;
+    }
   }
 
   &__body {
