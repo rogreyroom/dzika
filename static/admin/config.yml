@@ -88,6 +88,6 @@ collections:
                 widget: 'list'
                 fields:
                   - { label: 'Nazwa potrawy', name: 'dish_name', widget: 'string' }
-                  - { label: 'Opis potrawy', name: 'dish_description', widget: 'string' }
-                  - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string' }
-                  - { label: 'Cena potrawy', name: 'dish_price', widget: 'string' }
+                  - { label: 'Opis potrawy', name: 'dish_description', widget: 'string', required: false }
+                  - { label: 'Ilość/wielkość potrawy', name: 'dish_size', widget: 'string', required: false }
+                  - { label: 'Cena potrawy', name: 'dish_price', widget: 'string', required: false }
