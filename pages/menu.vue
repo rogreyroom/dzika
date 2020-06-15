@@ -245,7 +245,8 @@ export default {
   }
 
   &__item {
-    margin-bottom: var(--space-normal);
+    // margin-bottom: var(--space-normal);
+    padding-bottom: var(--space-normal);
     break-inside: avoid;
 
     &:last-child {
