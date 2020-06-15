@@ -5,7 +5,7 @@
         <h2 class="events__title">
           {{ events_page_title }}
         </h2>
-        <p
+        <div
           class="events__body"
           v-html="$md.render(events_text)"
         />
