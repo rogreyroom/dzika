@@ -74,7 +74,11 @@ export default {
       width: max-content;
     }
 
-    @media (min-width: 1024px) {
+    @media (min-height: 1024px) {
+      --slogan-subtitle-font-size: var(--title-large);
+    }
+
+    @media (min-height: 768px) and (min-width: 1024px) {
       --slogan-subtitle-font-size: var(--title-large);
     }
   }
