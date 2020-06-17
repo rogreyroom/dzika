@@ -25,7 +25,8 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Sedgwick+Ave&display=swap'
+        // href: 'https://fonts.googleapis.com/css2?family=Raleway:wght@400;600&family=Sedgwick+Ave&display=swap'
+        href: 'https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro&display=swap'
       }
     ],
     script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
@@ -93,7 +94,7 @@ export default {
         })
       }
     }
-  },
+  }
   /*
    ** CMS router
    */
